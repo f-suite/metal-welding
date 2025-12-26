@@ -1,8 +1,10 @@
-import { useRef } from "react";
+import { useRef, useState, FormEvent } from "react";
 import Slider from "react-slick";
+import emailjs from "@emailjs/browser";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/slider.css";
+import { emailjsConfig } from "../config/emailjs.config";
 import svgPaths from "./svg-mj3zdjuk7f";
 
 function Frame1() {
@@ -1283,59 +1285,109 @@ function Frame123() {
   );
 }
 
-function Container() {
+function Container({ value, onChange, error }: { value: string; onChange: (e: React.ChangeEvent<HTMLInputElement>) => void; error?: string }) {
   return (
-    <div className="bg-white h-[62px] relative shrink-0 w-full" data-name="Container">
-      <div aria-hidden="true" className="absolute border border-[#d9d9d9] border-solid inset-0 pointer-events-none" />
-      <div className="flex flex-col justify-center size-full">
-        <div className="content-stretch flex flex-col items-start justify-center p-[14px] relative size-full">
-          <p className="font-['Montserrat:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#9f9f9f] text-[16px] text-nowrap tracking-[-0.32px]">Имя</p>
+    <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full">
+      <div className="bg-white h-[62px] relative shrink-0 w-full" data-name="Container">
+        <div aria-hidden="true" className={`absolute border border-solid inset-0 pointer-events-none ${error ? 'border-red-500' : 'border-[#d9d9d9]'}`} />
+        <div className="flex flex-col justify-center size-full">
+          <div className="content-stretch flex flex-col items-start justify-center p-[14px] relative size-full">
+            <input
+              type="text"
+              value={value}
+              onChange={onChange}
+              placeholder="Имя"
+              required
+              className={`font-['Montserrat:Regular',sans-serif] leading-[normal] not-italic w-full text-[16px] tracking-[-0.32px] bg-transparent outline-none placeholder:text-[#9f9f9f] ${error ? 'text-red-500' : 'text-black'}`}
+            />
+          </div>
         </div>
       </div>
+      {error && (
+        <p className="font-['Montserrat:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[12px] text-red-500 px-[14px]">
+          {error}
+        </p>
+      )}
     </div>
   );
 }
 
-function Container1() {
+function Container1({ value, onChange, error }: { value: string; onChange: (e: React.ChangeEvent<HTMLInputElement>) => void; error?: string }) {
   return (
     <div className="basis-0 bg-white grow h-[62px] min-h-px min-w-px relative rounded-[12px] shrink-0" data-name="Container">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center p-[14px] relative size-full">
-          <p className="font-['Montserrat:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#9f9f9f] text-[16px] text-nowrap tracking-[-0.32px]">Телефон</p>
+          <input
+            type="tel"
+            value={value}
+            onChange={onChange}
+            placeholder="Телефон"
+            required
+            className={`font-['Montserrat:Regular',sans-serif] leading-[normal] not-italic w-full text-[16px] tracking-[-0.32px] bg-transparent outline-none placeholder:text-[#9f9f9f] ${error ? 'text-red-500' : 'text-black'}`}
+          />
         </div>
       </div>
     </div>
   );
 }
 
-function Container2() {
+function Container2({ value, onChange, error }: { value: string; onChange: (e: React.ChangeEvent<HTMLInputElement>) => void; error?: string }) {
   return (
-    <div className="content-stretch flex h-[62px] items-start relative shrink-0 w-full" data-name="Container">
-      <div aria-hidden="true" className="absolute border border-[#d9d9d9] border-solid inset-[-1px] pointer-events-none" />
-      <Container1 />
+    <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full">
+      <div className="content-stretch flex h-[62px] items-start relative shrink-0 w-full" data-name="Container">
+        <div aria-hidden="true" className={`absolute border border-solid inset-[-1px] pointer-events-none ${error ? 'border-red-500' : 'border-[#d9d9d9]'}`} />
+        <Container1 value={value} onChange={onChange} error={error} />
+      </div>
+      {error && (
+        <p className="font-['Montserrat:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[12px] text-red-500 px-[14px]">
+          {error}
+        </p>
+      )}
     </div>
   );
 }
 
-function Container3() {
+function Container3({ value, onChange }: { value: string; onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void }) {
   return (
     <div className="bg-white h-[151px] relative shrink-0 w-full" data-name="Container">
       <div aria-hidden="true" className="absolute border border-[#d9d9d9] border-solid inset-0 pointer-events-none" />
       <div className="size-full">
         <div className="content-stretch flex flex-col items-start p-[14px] relative size-full">
-          <p className="font-['Montserrat:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#9f9f9f] text-[16px] text-nowrap tracking-[-0.32px]">Комментарии...</p>
+          <textarea
+            value={value}
+            onChange={onChange}
+            placeholder="Комментарии..."
+            className="font-['Montserrat:Regular',sans-serif] leading-[normal] not-italic w-full h-full text-[16px] text-black tracking-[-0.32px] bg-transparent outline-none resize-none placeholder:text-[#9f9f9f]"
+          />
         </div>
       </div>
     </div>
   );
 }
 
-function Frame47() {
+function Frame47({ formData, setFormData, errors, handleNameChange, handlePhoneChange }: { 
+  formData: { name: string; phone: string; comments: string }; 
+  setFormData: React.Dispatch<React.SetStateAction<{ name: string; phone: string; comments: string }>>;
+  errors: { name?: string; phone?: string };
+  handleNameChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handlePhoneChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}) {
   return (
     <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full">
-      <Container />
-      <Container2 />
-      <Container3 />
+      <Container 
+        value={formData.name} 
+        onChange={handleNameChange}
+        error={errors.name}
+      />
+      <Container2 
+        value={formData.phone} 
+        onChange={handlePhoneChange}
+        error={errors.phone}
+      />
+      <Container3 
+        value={formData.comments} 
+        onChange={(e) => setFormData({ ...formData, comments: e.target.value })} 
+      />
     </div>
   );
 }
@@ -1352,38 +1404,197 @@ function Frame124() {
   );
 }
 
-function Frame125() {
+function Frame125({ isSubmitting }: { isSubmitting: boolean }) {
   return (
-    <div className="content-stretch flex gap-[6px] items-center relative shrink-0">
-      <p className="font-['Montserrat:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[22px] text-black text-nowrap">Отправить</p>
-      <Frame124 />
-    </div>
+    <button 
+      type="submit" 
+      disabled={isSubmitting}
+      className="content-stretch flex gap-[6px] items-center relative shrink-0 cursor-pointer hover:opacity-80 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+    >
+      <p className="font-['Montserrat:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[22px] text-black text-nowrap">
+        {isSubmitting ? "Отправка..." : "Отправить"}
+      </p>
+      {!isSubmitting && <Frame124 />}
+    </button>
   );
 }
 
-function Frame48() {
+function Frame48({ formData, setFormData, handleSubmit, errors, handleNameChange, handlePhoneChange, isSubmitting }: { 
+  formData: { name: string; phone: string; comments: string }; 
+  setFormData: React.Dispatch<React.SetStateAction<{ name: string; phone: string; comments: string }>>;
+  handleSubmit: (e: FormEvent) => void;
+  errors: { name?: string; phone?: string };
+  handleNameChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handlePhoneChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  isSubmitting: boolean;
+}) {
   return (
-    <div className="content-stretch flex flex-col gap-[37px] items-start relative shrink-0 w-[654px]">
-      <Frame47 />
-      <Frame125 />
-    </div>
+    <form onSubmit={handleSubmit} className="content-stretch flex flex-col gap-[37px] items-start relative shrink-0 w-[654px]">
+      <Frame47 
+        formData={formData} 
+        setFormData={setFormData} 
+        errors={errors}
+        handleNameChange={handleNameChange}
+        handlePhoneChange={handlePhoneChange}
+      />
+      <Frame125 isSubmitting={isSubmitting} />
+    </form>
   );
 }
 
-function Frame49() {
+function Frame49({ formData, setFormData, handleSubmit, errors, handleNameChange, handlePhoneChange, isSubmitting }: { 
+  formData: { name: string; phone: string; comments: string }; 
+  setFormData: React.Dispatch<React.SetStateAction<{ name: string; phone: string; comments: string }>>;
+  handleSubmit: (e: FormEvent) => void;
+  errors: { name?: string; phone?: string };
+  handleNameChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handlePhoneChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  isSubmitting: boolean;
+}) {
   return (
     <div className="content-stretch flex items-start justify-between gap-[25px] relative shrink-0 w-full">
       <Frame123 />
-      <Frame48 />
+      <Frame48 
+        formData={formData} 
+        setFormData={setFormData} 
+        handleSubmit={handleSubmit} 
+        errors={errors}
+        handleNameChange={handleNameChange}
+        handlePhoneChange={handlePhoneChange}
+        isSubmitting={isSubmitting}
+      />
     </div>
   );
 }
 
 function Frame50() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    comments: "",
+  });
+
+  const [errors, setErrors] = useState<{ name?: string; phone?: string }>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Валидация имени: минимум 2 символа, только буквы, пробелы и дефисы
+  const validateName = (name: string): string | undefined => {
+    if (!name.trim()) {
+      return "Имя обязательно для заполнения";
+    }
+    if (name.trim().length < 2) {
+      return "Имя должно содержать минимум 2 символа";
+    }
+    if (!/^[а-яА-ЯёЁa-zA-Z\s\-]+$/.test(name.trim())) {
+      return "Имя может содержать только буквы, пробелы и дефисы";
+    }
+    return undefined;
+  };
+
+  // Валидация телефона: белорусский формат
+  const validatePhone = (phone: string): string | undefined => {
+    if (!phone.trim()) {
+      return "Телефон обязателен для заполнения";
+    }
+    // Удаляем все нецифровые символы для проверки
+    const digitsOnly = phone.replace(/\D/g, "");
+    
+    // Проверяем различные форматы: +375, 375, или без префикса (9 цифр)
+    if (digitsOnly.length === 12 && digitsOnly.startsWith("375")) {
+      // +375 в начале - это нормально (375 + 9 цифр)
+      return undefined;
+    } else if (digitsOnly.length === 9) {
+      // 9 цифр без префикса - тоже нормально
+      return undefined;
+    } else {
+      return "Введите корректный номер телефона (например: +375 29 123 45 67)";
+    }
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    
+    // Валидация полей
+    const nameError = validateName(formData.name);
+    const phoneError = validatePhone(formData.phone);
+    
+    const newErrors: { name?: string; phone?: string } = {};
+    if (nameError) newErrors.name = nameError;
+    if (phoneError) newErrors.phone = phoneError;
+    
+    setErrors(newErrors);
+    
+    // Если есть ошибки, не отправляем форму
+    if (nameError || phoneError) {
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
+    try {
+      // Инициализация EmailJS с Public Key
+      emailjs.init(emailjsConfig.publicKey);
+      
+      // Параметры для шаблона email
+      const templateParams = {
+        from_name: formData.name,
+        from_phone: formData.phone,
+        message: formData.comments || "Комментарий не указан",
+        to_email: emailjsConfig.toEmail,
+      };
+      
+      // Отправка email
+      await emailjs.send(
+        emailjsConfig.serviceId,
+        emailjsConfig.templateId,
+        templateParams
+      );
+      
+      // Успешная отправка
+      alert(`Спасибо, ${formData.name}! Мы свяжемся с вами по номеру ${formData.phone}`);
+      setFormData({ name: "", phone: "", comments: "" });
+      setErrors({});
+    } catch (error) {
+      console.error("Ошибка отправки формы:", error);
+      alert("Произошла ошибка при отправке формы. Пожалуйста, попробуйте позже или свяжитесь с нами по телефону.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  // Валидация при изменении полей (валидируем если уже есть ошибка или поле не пустое)
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newName = e.target.value;
+    setFormData({ ...formData, name: newName });
+    // Валидируем только если уже есть ошибка или пользователь начал вводить
+    if (errors.name !== undefined || newName.length > 0) {
+      const error = validateName(newName);
+      setErrors({ ...errors, name: error });
+    }
+  };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newPhone = e.target.value;
+    setFormData({ ...formData, phone: newPhone });
+    // Валидируем только если уже есть ошибка или пользователь начал вводить
+    if (errors.phone !== undefined || newPhone.length > 0) {
+      const error = validatePhone(newPhone);
+      setErrors({ ...errors, phone: error });
+    }
+  };
+
   return (
     <div className="content-stretch flex flex-col gap-[39px] items-start relative shrink-0 w-full max-w-[1333px]">
       <p className="font-['Montserrat:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[40px] text-black uppercase w-full">Остались вопросы?</p>
-      <Frame49 />
+      <Frame49 
+        formData={formData} 
+        setFormData={setFormData} 
+        handleSubmit={handleSubmit} 
+        errors={errors}
+        handleNameChange={handleNameChange}
+        handlePhoneChange={handlePhoneChange}
+        isSubmitting={isSubmitting}
+      />
     </div>
   );
 }
