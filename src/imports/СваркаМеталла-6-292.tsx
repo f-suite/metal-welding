@@ -1532,8 +1532,14 @@ function Frame50() {
     setIsSubmitting(true);
     
     try {
-      // Инициализация EmailJS с Public Key
-      emailjs.init(emailjsConfig.publicKey);
+      // Проверка конфигурации
+      if (emailjsConfig.publicKey === "YOUR_PUBLIC_KEY" || !emailjsConfig.publicKey) {
+        throw new Error("Public Key не настроен. Пожалуйста, настройте VITE_EMAILJS_PUBLIC_KEY в .env файле или в конфигурации.");
+      }
+      
+      if (emailjsConfig.templateId === "YOUR_TEMPLATE_ID" || !emailjsConfig.templateId) {
+        throw new Error("Template ID не настроен. Пожалуйста, настройте VITE_EMAILJS_TEMPLATE_ID в .env файле или в конфигурации.");
+      }
       
       // Параметры для шаблона email
       const templateParams = {
@@ -1543,20 +1549,56 @@ function Frame50() {
         to_email: emailjsConfig.toEmail,
       };
       
-      // Отправка email
-      await emailjs.send(
+      console.log("Отправка email с параметрами:", {
+        serviceId: emailjsConfig.serviceId,
+        templateId: emailjsConfig.templateId,
+        publicKey: emailjsConfig.publicKey ? "установлен" : "не установлен",
+        params: templateParams
+      });
+      
+      // Отправка email (в версии 4.x publicKey передается как опция)
+      const response = await emailjs.send(
         emailjsConfig.serviceId,
         emailjsConfig.templateId,
-        templateParams
+        templateParams,
+        {
+          publicKey: emailjsConfig.publicKey,
+        }
       );
+      
+      console.log("Email успешно отправлен:", response);
       
       // Успешная отправка
       alert(`Спасибо, ${formData.name}! Мы свяжемся с вами по номеру ${formData.phone}`);
       setFormData({ name: "", phone: "", comments: "" });
       setErrors({});
-    } catch (error) {
+    } catch (error: any) {
       console.error("Ошибка отправки формы:", error);
-      alert("Произошла ошибка при отправке формы. Пожалуйста, попробуйте позже или свяжитесь с нами по телефону.");
+      
+      // Детальная информация об ошибке
+      let errorMessage = "Произошла ошибка при отправке формы.";
+      
+      if (error?.text) {
+        errorMessage += `\n\nДетали: ${error.text}`;
+        console.error("Детали ошибки EmailJS:", error.text);
+      } else if (error?.message) {
+        errorMessage += `\n\n${error.message}`;
+        console.error("Сообщение об ошибке:", error.message);
+      } else if (error?.status) {
+        errorMessage += `\n\nКод ошибки: ${error.status}`;
+        console.error("Код ошибки:", error.status);
+      }
+      
+      // Проверка конкретных ошибок
+      if (error?.text?.includes("Invalid Public Key") || error?.text?.includes("public key")) {
+        errorMessage = "Ошибка: Неверный Public Key. Проверьте настройки в EmailJS Dashboard.";
+      } else if (error?.text?.includes("Service not found") || error?.text?.includes("service")) {
+        errorMessage = "Ошибка: Service ID не найден. Проверьте правильность Service ID.";
+      } else if (error?.text?.includes("Template not found") || error?.text?.includes("template")) {
+        errorMessage = "Ошибка: Template ID не найден. Проверьте правильность Template ID.";
+      }
+      
+      alert(errorMessage + "\n\nПожалуйста, попробуйте позже или свяжитесь с нами по телефону.");
     } finally {
       setIsSubmitting(false);
     }

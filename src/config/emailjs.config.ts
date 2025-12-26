@@ -11,10 +11,10 @@ export const emailjsConfig = {
   publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY",
   
   // Service ID из EmailJS Dashboard -> Email Services
-  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID",
+  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_uymw6gt",
   
   // Template ID из EmailJS Dashboard -> Email Templates
-  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID",
+  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_u3tba33",
   
   // Email получателя (можно также настроить в шаблоне)
   toEmail: import.meta.env.VITE_EMAILJS_TO_EMAIL || "your-email@example.com",
