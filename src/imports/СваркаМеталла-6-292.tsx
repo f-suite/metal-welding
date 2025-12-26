@@ -1,3 +1,8 @@
+import { useRef } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "../styles/slider.css";
 import svgPaths from "./svg-mj3zdjuk7f";
 
 function Frame1() {
@@ -1134,14 +1139,6 @@ function ArrowForwardIos() {
   );
 }
 
-function Frame44() {
-  return (
-    <div className="bg-[#e9e9e9] content-stretch flex items-center p-[18px] relative size-[60px]">
-      <ArrowForwardIos />
-    </div>
-  );
-}
-
 function ArrowForwardIos1() {
   return (
     <div className="relative shrink-0 size-[24px]" data-name="arrow_forward_ios">
@@ -1159,39 +1156,41 @@ function ArrowForwardIos1() {
   );
 }
 
-function Frame43() {
-  return (
-    <div className="bg-[#d9d9d9] content-stretch flex items-center p-[18px] relative shrink-0 size-[60px]">
-      <ArrowForwardIos1 />
-    </div>
-  );
-}
-
-function Frame40() {
+function Frame40({ onPrev, onNext }: { onPrev: () => void; onNext: () => void }) {
   return (
     <div className="content-stretch flex gap-[15px] items-center relative shrink-0">
-      <div className="flex items-center justify-center relative shrink-0">
+      <button
+        onClick={onPrev}
+        className="flex items-center justify-center relative shrink-0 cursor-pointer"
+      >
         <div className="flex-none rotate-[180deg] scale-y-[-100%]">
-          <Frame44 />
+          <div className="bg-[#e9e9e9] content-stretch flex items-center p-[18px] relative size-[60px] hover:bg-[#d0d0d0] transition-colors">
+            <ArrowForwardIos />
+          </div>
         </div>
-      </div>
-      <Frame43 />
+      </button>
+      <button
+        onClick={onNext}
+        className="bg-[#d9d9d9] content-stretch flex items-center p-[18px] relative shrink-0 size-[60px] hover:bg-[#c0c0c0] transition-colors cursor-pointer"
+      >
+        <ArrowForwardIos1 />
+      </button>
     </div>
   );
 }
 
-function Frame41() {
+function Frame41({ onPrev, onNext }: { onPrev: () => void; onNext: () => void }) {
   return (
     <div className="content-stretch flex flex-col items-start justify-between relative self-stretch shrink-0 w-[289px]">
       <Frame119 />
-      <Frame40 />
+      <Frame40 onPrev={onPrev} onNext={onNext} />
     </div>
   );
 }
 
 function Frame120() {
   return (
-    <div className="bg-[#d9d9d9] h-[361px] relative shrink-0 w-[521px]">
+    <div className="bg-[#d9d9d9] h-[361px] relative shrink-0 w-full">
       <div className="flex flex-row items-center justify-center size-full">
         <div className="content-stretch flex items-center justify-center px-[280px] py-[204px] relative size-full">
           <p className="font-['Montserrat:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[24px] text-black text-nowrap">Фото (контент)</p>
@@ -1201,21 +1200,55 @@ function Frame120() {
   );
 }
 
-function Frame121() {
+function Frame121({ sliderRef }: { sliderRef: React.RefObject<Slider> }) {
+  const handlePrev = () => {
+    sliderRef.current?.slickPrev();
+  };
+
+  const handleNext = () => {
+    sliderRef.current?.slickNext();
+  };
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
-    <div className="basis-0 content-stretch flex gap-[1px] grow items-start min-h-px min-w-px relative shrink-0">
-      <Frame41 />
-      {[...Array(2).keys()].map((_, i) => (
-        <Frame120 key={i} />
-      ))}
+    <div className="basis-0 content-stretch flex gap-[22px] grow items-start min-h-px min-w-px relative shrink-0">
+      <Frame41 onPrev={handlePrev} onNext={handleNext} />
+      <div className="flex-1 overflow-hidden">
+        <Slider ref={sliderRef} {...settings}>
+          {[1, 2, 3, 4, 5, 6].map((i) => (
+            <div key={i} className="px-[11px]">
+              <Frame120 />
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 }
 
 function Frame122() {
+  const sliderRef = useRef<Slider>(null);
+
   return (
     <div className="content-stretch flex items-start relative shrink-0 w-full max-w-[1333px]">
-      <Frame121 />
+      <Frame121 sliderRef={sliderRef} />
     </div>
   );
 }
