@@ -7,13 +7,101 @@ export function ContactForm() {
     phone: "",
     comments: "",
   });
+  const [phoneError, setPhoneError] = useState("");
+
+  const validatePhone = (phone: string): boolean => {
+    if (!phone || phone.trim().length === 0) return false;
+    
+    const trimmed = phone.trim();
+    
+    // Строгая проверка: только +375######### (13 символов) или 80######### (11 символов)
+    // +375 + 9 цифр = 13 символов
+    // 80 + 9 цифр = 11 символов
+    
+    if (trimmed.startsWith('+')) {
+      // Если начинается с +, должно быть ровно 13 символов
+      if (trimmed.length !== 13) return false;
+      // Проверяем, что это +375 и после него 9 цифр
+      return /^\+375\d{9}$/.test(trimmed);
+    } else if (trimmed.startsWith('80')) {
+      // Проверяем, что после 80 идет ровно 9 цифр и общая длина 11
+      return trimmed.length === 11 && /^80\d{9}$/.test(trimmed);
+    }
+    
+    return false;
+  };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setFormData({ ...formData, phone: value });
+    
+    const trimmed = value.trim();
+    
+    // Показываем ошибку только если введено что-то, но формат неверный
+    if (trimmed.length > 0) {
+      if (trimmed.startsWith('+')) {
+        // Если начинается с +, должно быть ровно 13 символов
+        if (trimmed.length !== 13) {
+          setPhoneError("Телефон должен быть в формате +375######### (ровно 13 символов)");
+        } else if (!validatePhone(trimmed)) {
+          setPhoneError("Телефон должен быть в формате +375######### (ровно 13 символов)");
+        } else {
+          setPhoneError("");
+        }
+      } else if (trimmed.startsWith('80')) {
+        // Для 80 должно быть ровно 11 символов
+        if (trimmed.length > 11) {
+          setPhoneError("Телефон должен быть в формате 80######### (11 символов)");
+        } else if (trimmed.length === 11 && !validatePhone(trimmed)) {
+          setPhoneError("Телефон должен быть в формате 80######### (11 символов)");
+        } else {
+          setPhoneError("");
+        }
+      } else {
+        // Если не начинается с правильного префикса, сразу показываем ошибку
+        setPhoneError("Телефон должен быть в формате +375######### или 80#########");
+      }
+    } else {
+      setPhoneError("");
+    }
+  };
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+    
+    const trimmedPhone = formData.phone.trim();
+    
+    // Строгая проверка перед отправкой
+    if (!trimmedPhone) {
+      setPhoneError("Телефон обязателен для заполнения");
+      return;
+    }
+    
+    if (trimmedPhone.startsWith('+')) {
+      if (trimmedPhone.length !== 13) {
+        setPhoneError("Телефон должен быть в формате +375######### (ровно 13 символов)");
+        return;
+      }
+    } else if (trimmedPhone.startsWith('80')) {
+      if (trimmedPhone.length !== 11) {
+        setPhoneError("Телефон должен быть в формате 80######### (ровно 11 символов)");
+        return;
+      }
+    } else {
+      setPhoneError("Телефон должен быть в формате +375######### или 80#########");
+      return;
+    }
+    
+    if (!validatePhone(trimmedPhone)) {
+      setPhoneError("Телефон должен быть в формате +375######### (13 символов) или 80######### (11 символов)");
+      return;
+    }
+    
     console.log("Form submitted:", formData);
     // Здесь можно добавить логику отправки формы
-    alert(`Спасибо, ${formData.name}! Мы свяжемся с вами по номеру ${formData.phone}`);
+    alert(`Спасибо, ${formData.name}! Мы свяжемся с вами по номеру ${trimmedPhone}`);
     setFormData({ name: "", phone: "", comments: "" });
+    setPhoneError("");
   };
 
   return (
@@ -50,22 +138,26 @@ export function ContactForm() {
                 </div>
               </div>
             </div>
-            <div className="content-stretch flex h-[62px] items-start relative shrink-0 w-full">
-              <div aria-hidden="true" className="absolute border border-[#d9d9d9] border-solid inset-[-1px] pointer-events-none" />
-              <div className="basis-0 bg-white grow h-[62px] min-h-px min-w-px relative rounded-[12px] shrink-0">
-                <div className="flex flex-row items-center size-full">
-                  <div className="content-stretch flex items-center p-[14px] relative size-full">
-                    <input
-                      type="tel"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="Телефон"
-                      required
-                      className="font-['Montserrat',sans-serif] leading-[normal] not-italic w-full text-[16px] text-black tracking-[-0.32px] bg-transparent outline-none placeholder:text-[#9f9f9f]"
-                    />
+            <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full">
+              <div className="content-stretch flex h-[62px] items-start relative shrink-0 w-full">
+                <div aria-hidden="true" className={`absolute border ${phoneError ? 'border-red-500' : 'border-[#d9d9d9]'} border-solid inset-[-1px] pointer-events-none`} />
+                <div className="basis-0 bg-white grow h-[62px] min-h-px min-w-px relative rounded-[12px] shrink-0">
+                  <div className="flex flex-row items-center size-full">
+                    <div className="content-stretch flex items-center p-[14px] relative size-full">
+                      <input
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handlePhoneChange}
+                        placeholder="Телефон"
+                        className="font-['Montserrat',sans-serif] leading-[normal] not-italic w-full text-[16px] text-black tracking-[-0.32px] bg-transparent outline-none placeholder:text-[#9f9f9f]"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
+              {phoneError && (
+                <p className="font-['Montserrat',sans-serif] text-[14px] text-red-500">{phoneError}</p>
+              )}
             </div>
             <div className="bg-white h-[151px] relative shrink-0 w-full">
               <div aria-hidden="true" className="absolute border border-[#d9d9d9] border-solid inset-0 pointer-events-none" />
