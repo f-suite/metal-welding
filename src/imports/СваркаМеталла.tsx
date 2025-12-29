@@ -14,7 +14,7 @@ function Frame1() {
 
 function Frame2() {
   return (
-    <div className="content-stretch flex gap-[6px] items-center relative shrink-0">
+    <div className="content-stretch flex gap-[6px] items-center relative shrink-0 cursor-pointer hover:opacity-80 transition-opacity">
       <p className="font-['Montserrat:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[22px] text-black text-nowrap">Запросить расчет</p>
       <Frame1 />
     </div>
@@ -24,7 +24,7 @@ function Frame2() {
 function Frame11() {
   return (
     <div className="basis-0 content-stretch flex flex-col gap-[23px] grow items-start min-h-px min-w-px relative shrink-0">
-      <p className="font-['Montserrat:Regular',sans-serif] leading-[normal] min-w-full not-italic relative shrink-0 text-[20px] text-black w-[min-content]">{`Изготавливаем и свариваем металлические изделия любой сложности: от единичных деталей до серийных партий. Работаем со сталью, нержавеющей сталью , алюминием и цветными металлами. Выполняем заказы по чертежам или разрабатываем проект под вашу задачу `}</p>
+      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] min-w-full not-italic relative shrink-0 text-[20px] text-black w-[min-content]">{`Изготавливаем и свариваем металлические изделия любой сложности: от единичных деталей до серийных партий. Работаем со сталью, нержавеющей сталью , алюминием и цветными металлами. Выполняем заказы по чертежам или разрабатываем проект под вашу задачу `}</p>
       <Frame2 />
     </div>
   );
@@ -1134,7 +1134,7 @@ function Frame118() {
 function Frame119() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-      <p className="font-['Montserrat:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[40px] text-black uppercase w-full">Наши работы</p>
+      <p className="font-['Montserrat:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[40px] text-black uppercase whitespace-nowrap">Наши работы</p>
     </div>
   );
 }
@@ -1400,7 +1400,7 @@ export default function Component() {
   return (
     <div className="bg-white relative size-full" data-name="Сварка металла">
       <Frame62 />
-      <p className="absolute font-['Montserrat:Bold',sans-serif] leading-[normal] left-[calc(50%-72px)] not-italic text-[40px] text-black text-nowrap top-[20px] uppercase">хедер</p>
+      <p className="absolute font-['Montserrat',sans-serif] font-bold leading-[100%] tracking-[0%] left-[calc(50%-72px)] not-italic text-[40px] text-black text-nowrap top-[20px] uppercase">ХЕДЕР</p>
       <p className="absolute font-['Montserrat:Bold',sans-serif] leading-[normal] left-[calc(50%-73px)] not-italic text-[40px] text-black text-nowrap top-[7095px] uppercase">ФУтер</p>
     </div>
   );
