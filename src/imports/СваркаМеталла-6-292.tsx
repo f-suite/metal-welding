@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../styles/slider.css";
 import { emailjsConfig } from "../config/emailjs.config";
 import svgPaths from "./svg-mj3zdjuk7f";
+import { Header } from "../app/components/Header";
 
 function Frame1() {
   return (
@@ -154,7 +155,7 @@ function Frame4() {
 
 function Frame32() {
   return (
-    <div className="content-stretch flex flex-col font-['Montserrat:Regular',sans-serif] gap-[51px] items-start leading-[normal] not-italic relative shrink-0 text-[16px] w-full">
+    <div className="content-stretch flex flex-col font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] gap-[60px] items-start not-italic relative shrink-0 text-[16px] w-full">
       <p className="relative shrink-0 text-[#9f9f9f] w-full">[01]</p>
       <p className="relative shrink-0 text-black w-full">Опыт в серийном и нестандартном производстве</p>
     </div>
@@ -172,7 +173,7 @@ function Frame33() {
 
 function Frame55() {
   return (
-    <div className="basis-0 content-stretch flex flex-col font-['Montserrat:Regular',sans-serif] grow items-start justify-between leading-[normal] min-h-px min-w-px not-italic relative shrink-0 text-[16px] w-full">
+    <div className="basis-0 content-stretch flex flex-col font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] grow items-start justify-between min-h-px min-w-px not-italic relative shrink-0 text-[16px] w-full">
       <p className="relative shrink-0 text-[#9f9f9f] w-full">[02]</p>
       <p className="relative shrink-0 text-black w-full">Точное соблюдение сроков</p>
     </div>
@@ -190,7 +191,7 @@ function Frame34() {
 
 function Frame56() {
   return (
-    <div className="content-stretch flex flex-col font-['Montserrat:Regular',sans-serif] gap-[51px] items-start leading-[normal] not-italic relative shrink-0 text-[16px] w-full">
+    <div className="content-stretch flex flex-col font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] gap-[60px] items-start not-italic relative shrink-0 text-[16px] w-full">
       <p className="relative shrink-0 text-[#9f9f9f] w-full">[03]</p>
       <p className="relative shrink-0 text-black w-full">Понятная смета без скрытых платежей</p>
     </div>
@@ -208,7 +209,7 @@ function Frame63() {
 
 function Frame64() {
   return (
-    <div className="basis-0 content-stretch flex flex-col font-['Montserrat:Regular',sans-serif] grow items-start justify-between leading-[normal] min-h-px min-w-px not-italic relative shrink-0 text-[16px] w-full">
+    <div className="basis-0 content-stretch flex flex-col font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] grow items-start justify-between min-h-px min-w-px not-italic relative shrink-0 text-[16px] w-full">
       <p className="relative shrink-0 text-[#9f9f9f] w-full">[04]</p>
       <p className="relative shrink-0 text-black w-full">Полный цикл: от резки до готового изделия</p>
     </div>
@@ -226,7 +227,7 @@ function Frame65() {
 
 function Frame66() {
   return (
-    <div className="basis-0 content-stretch flex flex-col font-['Montserrat:Regular',sans-serif] grow items-start justify-between leading-[normal] min-h-px min-w-px not-italic relative shrink-0 text-[16px] w-full">
+    <div className="basis-0 content-stretch flex flex-col font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] grow items-start justify-between min-h-px min-w-px not-italic relative shrink-0 text-[16px] w-full">
       <p className="relative shrink-0 text-[#9f9f9f] w-full">[05]</p>
       <p className="relative shrink-0 text-black w-full">Возможность срочного выполнения заказа</p>
     </div>
@@ -342,7 +343,7 @@ function Frame14() {
 function Frame70() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-      <p className="font-['Montserrat:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[18px] text-black w-full">Черная сталь</p>
+      <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black w-full">Черная сталь</p>
     </div>
   );
 }
@@ -372,7 +373,7 @@ function Frame59() {
 function Frame71() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-      <p className="font-['Montserrat:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[18px] text-black w-full">Нержавеющая сталь</p>
+      <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black w-full">Нержавеющая сталь</p>
     </div>
   );
 }
@@ -402,7 +403,7 @@ function Frame60() {
 function Frame73() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-      <p className="font-['Montserrat:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[18px] text-black w-full">Алюминий</p>
+      <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black w-full">Алюминий</p>
     </div>
   );
 }
@@ -432,7 +433,7 @@ function Frame58() {
 function Frame75() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-      <p className="font-['Montserrat:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[18px] text-black w-full">Оцинкованная сталь</p>
+      <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black w-full">Оцинкованная сталь</p>
     </div>
   );
 }
@@ -475,7 +476,7 @@ function Frame51() {
     <div className="bg-[#f0f0f0] relative shrink-0 w-full">
       <div className="size-full">
         <div className="content-stretch flex flex-col gap-[22px] items-start p-[30px] relative w-full">
-          <p className="font-['Montserrat:Medium',sans-serif] leading-[normal] min-w-full not-italic relative shrink-0 text-[40px] text-black uppercase w-[min-content]">Материалы</p>
+          <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[40px] text-black uppercase whitespace-nowrap">Материалы</p>
           <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[24px] text-black text-nowrap">Мы работаем со всеми распространёнными типами металлов:</p>
           <Frame77 />
         </div>
@@ -599,7 +600,7 @@ function Frame15() {
 
 function Frame17() {
   return (
-    <div className="content-stretch flex flex-col font-['Montserrat:Regular',sans-serif] gap-[16px] items-start leading-[normal] not-italic relative shrink-0 text-[16px] text-black text-nowrap">
+    <div className="content-stretch flex flex-col font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] gap-[16px] items-start not-italic relative shrink-0 text-[16px] text-black text-nowrap">
       <p className="relative shrink-0">Небольшие детали</p>
       <p className="relative shrink-0">Партии изделий</p>
       <p className="relative shrink-0">Крупные конструкции</p>
@@ -611,7 +612,7 @@ function Frame17() {
 function Frame89() {
   return (
     <div className="content-stretch flex flex-col gap-[23px] items-start relative shrink-0">
-      <p className="font-['Montserrat:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[18px] text-black text-nowrap">Тип заказа:</p>
+      <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black text-nowrap">Тип заказа:</p>
       <Frame17 />
     </div>
   );
@@ -619,7 +620,7 @@ function Frame89() {
 
 function Frame90() {
   return (
-    <div className="content-stretch flex flex-col font-['Montserrat:Regular',sans-serif] gap-[16px] items-start leading-[normal] not-italic relative shrink-0 text-[16px] text-black text-nowrap">
+    <div className="content-stretch flex flex-col font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] gap-[16px] items-start not-italic relative shrink-0 text-[16px] text-black text-nowrap">
       <p className="relative shrink-0">от 1 дня</p>
       <p className="relative shrink-0">2–5 дней</p>
       <p className="relative shrink-0">3–10 дней</p>
@@ -631,7 +632,7 @@ function Frame90() {
 function Frame91() {
   return (
     <div className="content-stretch flex flex-col gap-[23px] items-start relative shrink-0">
-      <p className="font-['Montserrat:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[18px] text-black text-nowrap">Срок</p>
+      <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black text-nowrap">Срок</p>
       <Frame90 />
     </div>
   );
@@ -649,7 +650,7 @@ function Frame18() {
 function Frame52() {
   return (
     <div className="content-stretch flex flex-col gap-[22px] items-start relative shrink-0 w-full">
-      <p className="font-['Montserrat:Medium',sans-serif] leading-[normal] min-w-full not-italic relative shrink-0 text-[40px] text-black uppercase w-[min-content]">Сроки выполнения</p>
+      <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[40px] text-black uppercase whitespace-nowrap">Сроки выполнения</p>
       <Frame18 />
     </div>
   );
@@ -1079,7 +1080,7 @@ function Frame30() {
       <Frame29 />
       <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[24px] text-black text-nowrap">
         <span>{`*Весь процесс прозрачен: `}</span>
-        <span>вы всегда понимаете</span>, на какой стадии находится проект.
+        <span className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic text-[24px]">вы всегда понимаете</span>, на какой стадии находится проект.
       </p>
     </div>
   );
@@ -1118,7 +1119,7 @@ function Frame118() {
 
 function Frame119() {
   return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col items-start relative shrink-0">
       <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[40px] text-black uppercase whitespace-nowrap">Наши работы</p>
     </div>
   );
@@ -1183,7 +1184,7 @@ function Frame40({ onPrev, onNext }: { onPrev: () => void; onNext: () => void })
 
 function Frame41({ onPrev, onNext }: { onPrev: () => void; onNext: () => void }) {
   return (
-    <div className="content-stretch flex flex-col items-start justify-between relative self-stretch shrink-0 w-[289px]">
+    <div className="content-stretch flex flex-col items-start justify-between relative self-stretch shrink-0 min-w-[289px]">
       <Frame119 />
       <Frame40 onPrev={onPrev} onNext={onNext} />
     </div>
@@ -1298,13 +1299,13 @@ function Container({ value, onChange, error }: { value: string; onChange: (e: Re
               onChange={onChange}
               placeholder="Имя"
               required
-              className={`font-['Montserrat:Regular',sans-serif] leading-[normal] not-italic w-full text-[16px] tracking-[-0.32px] bg-transparent outline-none placeholder:text-[#9f9f9f] ${error ? 'text-red-500' : 'text-black'}`}
+              className={`font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[-2%] not-italic w-full text-[16px] bg-transparent outline-none placeholder:text-[#9f9f9f] ${error ? 'text-red-500' : 'text-black'}`}
             />
           </div>
         </div>
       </div>
       {error && (
-        <p className="font-['Montserrat:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[12px] text-red-500 px-[14px]">
+        <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[-2%] not-italic relative shrink-0 text-[14px] text-red-500 px-[14px]">
           {error}
         </p>
       )}
@@ -1323,7 +1324,7 @@ function Container1({ value, onChange, error }: { value: string; onChange: (e: R
             onChange={onChange}
             placeholder="Телефон"
             required
-            className={`font-['Montserrat:Regular',sans-serif] leading-[normal] not-italic w-full text-[16px] tracking-[-0.32px] bg-transparent outline-none placeholder:text-[#9f9f9f] ${error ? 'text-red-500' : 'text-black'}`}
+            className={`font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[-2%] not-italic w-full text-[16px] bg-transparent outline-none placeholder:text-[#9f9f9f] ${error ? 'text-red-500' : 'text-black'}`}
           />
         </div>
       </div>
@@ -1339,7 +1340,7 @@ function Container2({ value, onChange, error }: { value: string; onChange: (e: R
         <Container1 value={value} onChange={onChange} error={error} />
       </div>
       {error && (
-        <p className="font-['Montserrat:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[12px] text-red-500 px-[14px]">
+        <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[-2%] not-italic relative shrink-0 text-[14px] text-red-500 px-[14px]">
           {error}
         </p>
       )}
@@ -1357,7 +1358,7 @@ function Container3({ value, onChange }: { value: string; onChange: (e: React.Ch
             value={value}
             onChange={onChange}
             placeholder="Комментарии..."
-            className="font-['Montserrat:Regular',sans-serif] leading-[normal] not-italic w-full h-full text-[16px] text-black tracking-[-0.32px] bg-transparent outline-none resize-none placeholder:text-[#9f9f9f]"
+            className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[-2%] not-italic w-full h-full text-[16px] text-black bg-transparent outline-none resize-none placeholder:text-[#9f9f9f]"
           />
         </div>
       </div>
@@ -1411,7 +1412,7 @@ function Frame125({ isSubmitting }: { isSubmitting: boolean }) {
       disabled={isSubmitting}
       className="content-stretch flex gap-[6px] items-center relative shrink-0 cursor-pointer hover:opacity-80 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
     >
-      <p className="font-['Montserrat:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[22px] text-black text-nowrap">
+      <p className="font-['Montserrat',sans-serif] font-semibold leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[22px] text-black text-nowrap">
         {isSubmitting ? "Отправка..." : "Отправить"}
       </p>
       {!isSubmitting && <Frame124 />}
@@ -1679,11 +1680,11 @@ function Frame62() {
 export default function Component() {
   return (
     <div className="bg-white relative size-full" data-name="Сварка металла">
-      <div className="w-full max-w-[1385px] mx-auto p-[26px] pt-[80px]">
+      <div className="w-full max-w-[1385px] mx-auto p-[26px] pt-[124px]">
         <Frame62 />
+        <p className="font-['Montserrat',sans-serif] font-bold leading-[100%] tracking-[0%] not-italic text-[40px] text-black text-nowrap uppercase mt-[98px] mb-[45px] text-center">ФУТЕР</p>
       </div>
-      <p className="absolute font-['Montserrat',sans-serif] font-bold leading-[100%] tracking-[0%] left-[calc(50%-72px)] not-italic text-[40px] text-black text-nowrap top-[20px] uppercase">ХЕДЕР</p>
-      <p className="absolute font-['Montserrat',sans-serif] font-bold leading-[100%] tracking-[0%] left-[calc(50%-73px)] not-italic text-[40px] text-black text-nowrap top-[7095px] uppercase">ФУТЕР</p>
+      <Header />
     </div>
   );
 }
