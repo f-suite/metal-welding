@@ -24,13 +24,13 @@ export function ContactForm() {
           <div className="flex flex-row items-center justify-center size-full">
             <div className="content-stretch flex gap-[10px] items-center justify-center px-[280px] py-[204px] relative size-full">
               <p className="font-['Montserrat',sans-serif] leading-[normal] not-italic relative shrink-0 text-[24px] text-black text-nowrap">{`Фото менеджера и его должность `}</p>
-              <div className="absolute bg-white content-stretch flex flex-col items-center justify-center left-[15px] px-[16px] py-[10px] top-[301px]">
-                <p className="font-['Montserrat',sans-serif] leading-[normal] not-italic relative shrink-0 text-[18px] text-black w-full">Алексей</p>
-              </div>
-              <div className="absolute bg-white content-stretch flex flex-col items-center justify-center left-[442px] px-[16px] py-[10px] top-[301px]">
-                <p className="font-['Montserrat',sans-serif] leading-[normal] not-italic relative shrink-0 text-[18px] text-black w-full">Старший менеджер</p>
-              </div>
             </div>
+          </div>
+          <div className="absolute bg-white flex flex-col items-center justify-center left-[15px] px-[12px] py-[1px] z-10" style={{ bottom: '10px' }}>
+            <p className="font-['Montserrat',sans-serif] leading-[normal] not-italic text-[18px] text-black whitespace-nowrap">Алексей</p>
+          </div>
+          <div className="absolute bg-white flex flex-col items-center justify-center left-[442px] px-[12px] py-[1px] z-10" style={{ bottom: '10px' }}>
+            <p className="font-['Montserrat',sans-serif] leading-[normal] not-italic text-[18px] text-black whitespace-nowrap">Старший менеджер</p>
           </div>
         </div>
         <form onSubmit={handleSubmit} className="content-stretch flex flex-col gap-[37px] items-start relative shrink-0 w-[680px]">

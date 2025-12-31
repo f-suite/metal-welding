@@ -21,12 +21,12 @@ export function WorksSlider() {
       <div className="basis-0 content-stretch flex gap-[22px] grow items-start min-h-px min-w-px relative shrink-0">
         <div className="content-stretch flex flex-col items-start justify-between relative self-stretch shrink-0 w-[350px]">
           <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-            <p className="font-['Montserrat',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[40px] text-black uppercase w-full">Наши работы</p>
+            <p className="font-['Montserrat',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[40px] text-black uppercase whitespace-nowrap">Наши работы</p>
           </div>
           <div className="content-stretch flex gap-[15px] items-center relative shrink-0">
             <button
               onClick={() => sliderRef.current?.slickPrev()}
-              className="flex items-center justify-center relative shrink-0 cursor-pointer"
+              className="flex items-center justify-center relative shrink-0 cursor-pointer hover:opacity-80 transition-opacity"
             >
               <div className="flex-none rotate-[180deg] scale-y-[-100%]">
                 <div className="bg-[#e9e9e9] content-stretch flex items-center p-[18px] relative size-[60px] hover:bg-[#d0d0d0] transition-colors">
