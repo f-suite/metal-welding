@@ -11,8 +11,8 @@ export default function EnhancedSvarkaPage() {
       <div className="w-full max-w-[1385px] mx-auto px-[26px]">
         <Frame62 />
       </div>
-      <p className="absolute font-['Montserrat',sans-serif] font-bold leading-[normal] left-[calc(50%-72px)] not-italic text-[40px] text-black text-nowrap top-[20px] uppercase">хедер</p>
-      <p className="absolute font-['Montserrat',sans-serif] font-bold leading-[normal] left-[calc(50%-73px)] not-italic text-[40px] text-black text-nowrap top-[7095px] uppercase">ФУтер</p>
+      <p className="absolute font-['Montserrat',sans-serif] font-bold leading-[100%] tracking-[0%] left-[calc(50%-72px)] not-italic text-[40px] text-black text-nowrap top-[20px] uppercase">ХЕДЕР</p>
+      <p className="absolute font-['Montserrat',sans-serif] font-bold leading-[normal] left-[calc(50%-73px)] not-italic text-[40px] text-black text-nowrap top-[7095px] uppercase">ФУТЕР</p>
     </div>
   );
 }
@@ -61,7 +61,7 @@ function Frame2() {
 function Frame11() {
   return (
     <div className="basis-0 content-stretch flex flex-col gap-[23px] grow items-start min-h-px min-w-px relative shrink-0">
-      <p className="font-['Montserrat',sans-serif] leading-[normal] min-w-full not-italic relative shrink-0 text-[20px] text-black w-[min-content]">{`Изготавливаем и свариваем металлические изделия любой сложности: от единичных деталей до серийных партий. Работаем со сталью, нержавеющей сталью , алюминием и цветными металлами. Выполняем заказы по чертежам или разрабатываем проект под вашу задачу `}</p>
+      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] min-w-full not-italic relative shrink-0 text-[20px] text-black w-[min-content]">{`Изготавливаем и свариваем металлические изделия любой сложности: от единичных деталей до серийных партий. Работаем со сталью, нержавеющей сталью , алюминием и цветными металлами. Выполняем заказы по чертежам или разрабатываем проект под вашу задачу `}</p>
       <Frame2 />
     </div>
   );
@@ -124,12 +124,12 @@ function WorksSliderSection() {
       <div className="basis-0 content-stretch flex gap-[22px] grow items-start min-h-px min-w-px relative shrink-0">
         <div className="content-stretch flex flex-col items-start justify-between relative self-stretch shrink-0 w-[350px]">
           <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-            <p className="font-['Montserrat',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[40px] text-black uppercase w-full">Наши работы</p>
+            <p className="font-['Montserrat',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[40px] text-black uppercase whitespace-nowrap">Наши работы</p>
           </div>
           <div className="content-stretch flex gap-[15px] items-center relative shrink-0">
             <button
               onClick={() => sliderRef.current?.slickPrev()}
-              className="flex items-center justify-center relative shrink-0 cursor-pointer"
+              className="flex items-center justify-center relative shrink-0 cursor-pointer hover:opacity-80 transition-opacity"
             >
               <div className="flex-none rotate-[180deg] scale-y-[-100%]">
                 <div className="bg-[#e9e9e9] content-stretch flex items-center p-[18px] relative size-[60px] hover:bg-[#d0d0d0] transition-colors">
@@ -210,13 +210,13 @@ function ContactFormSection() {
           <div className="flex flex-row items-center justify-center size-full">
             <div className="content-stretch flex gap-[10px] items-center justify-center px-[280px] py-[204px] relative size-full">
               <p className="font-['Montserrat',sans-serif] leading-[normal] not-italic relative shrink-0 text-[24px] text-black text-nowrap">{`Фото менеджера и его должность `}</p>
-              <div className="absolute bg-white content-stretch flex flex-col items-center justify-center left-[15px] px-[16px] py-[10px] top-[301px]">
-                <p className="font-['Montserrat',sans-serif] leading-[normal] not-italic relative shrink-0 text-[18px] text-black w-full">Алексей</p>
-              </div>
-              <div className="absolute bg-white content-stretch flex flex-col items-center justify-center left-[442px] px-[16px] py-[10px] top-[301px]">
-                <p className="font-['Montserrat',sans-serif] leading-[normal] not-italic relative shrink-0 text-[18px] text-black w-full">Старший менеджер</p>
-              </div>
             </div>
+          </div>
+          <div className="absolute bg-white flex flex-col items-center justify-center left-[15px] px-[12px] py-[1px] z-10" style={{ bottom: '10px' }}>
+            <p className="font-['Montserrat',sans-serif] leading-[normal] not-italic text-[18px] text-black whitespace-nowrap">Алексей</p>
+          </div>
+          <div className="absolute bg-white flex flex-col items-center justify-center left-[442px] px-[12px] py-[1px] z-10" style={{ bottom: '10px' }}>
+            <p className="font-['Montserrat',sans-serif] leading-[normal] not-italic text-[18px] text-black whitespace-nowrap">Старший менеджер</p>
           </div>
         </div>
         <form onSubmit={handleSubmit} className="content-stretch flex flex-col gap-[37px] items-start relative shrink-0 w-[680px]">
