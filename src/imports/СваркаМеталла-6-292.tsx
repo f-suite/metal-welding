@@ -1298,13 +1298,13 @@ function Container({ value, onChange, error }: { value: string; onChange: (e: Re
               onChange={onChange}
               placeholder="Имя"
               required
-              className={`font-['Montserrat:Regular',sans-serif] leading-[normal] not-italic w-full text-[16px] tracking-[-0.32px] bg-transparent outline-none placeholder:text-[#9f9f9f] ${error ? 'text-red-500' : 'text-black'}`}
+              className={`font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[-2%] not-italic w-full text-[16px] bg-transparent outline-none placeholder:text-[#9f9f9f] ${error ? 'text-red-500' : 'text-black'}`}
             />
           </div>
         </div>
       </div>
       {error && (
-        <p className="font-['Montserrat:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[12px] text-red-500 px-[14px]">
+        <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[-2%] not-italic relative shrink-0 text-[14px] text-red-500 px-[14px]">
           {error}
         </p>
       )}
@@ -1323,7 +1323,7 @@ function Container1({ value, onChange, error }: { value: string; onChange: (e: R
             onChange={onChange}
             placeholder="Телефон"
             required
-            className={`font-['Montserrat:Regular',sans-serif] leading-[normal] not-italic w-full text-[16px] tracking-[-0.32px] bg-transparent outline-none placeholder:text-[#9f9f9f] ${error ? 'text-red-500' : 'text-black'}`}
+            className={`font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[-2%] not-italic w-full text-[16px] bg-transparent outline-none placeholder:text-[#9f9f9f] ${error ? 'text-red-500' : 'text-black'}`}
           />
         </div>
       </div>
@@ -1339,7 +1339,7 @@ function Container2({ value, onChange, error }: { value: string; onChange: (e: R
         <Container1 value={value} onChange={onChange} error={error} />
       </div>
       {error && (
-        <p className="font-['Montserrat:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[12px] text-red-500 px-[14px]">
+        <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[-2%] not-italic relative shrink-0 text-[14px] text-red-500 px-[14px]">
           {error}
         </p>
       )}
@@ -1357,7 +1357,7 @@ function Container3({ value, onChange }: { value: string; onChange: (e: React.Ch
             value={value}
             onChange={onChange}
             placeholder="Комментарии..."
-            className="font-['Montserrat:Regular',sans-serif] leading-[normal] not-italic w-full h-full text-[16px] text-black tracking-[-0.32px] bg-transparent outline-none resize-none placeholder:text-[#9f9f9f]"
+            className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[-2%] not-italic w-full h-full text-[16px] text-black bg-transparent outline-none resize-none placeholder:text-[#9f9f9f]"
           />
         </div>
       </div>
@@ -1411,7 +1411,7 @@ function Frame125({ isSubmitting }: { isSubmitting: boolean }) {
       disabled={isSubmitting}
       className="content-stretch flex gap-[6px] items-center relative shrink-0 cursor-pointer hover:opacity-80 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
     >
-      <p className="font-['Montserrat:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[22px] text-black text-nowrap">
+      <p className="font-['Montserrat',sans-serif] font-semibold leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[22px] text-black text-nowrap">
         {isSubmitting ? "Отправка..." : "Отправить"}
       </p>
       {!isSubmitting && <Frame124 />}
