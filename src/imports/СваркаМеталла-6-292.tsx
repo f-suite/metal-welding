@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../styles/slider.css";
 import { emailjsConfig } from "../config/emailjs.config";
 import svgPaths from "./svg-mj3zdjuk7f";
+import { Header } from "../app/components/Header";
 
 function Frame1() {
   return (
@@ -1683,7 +1684,7 @@ export default function Component() {
         <Frame62 />
         <p className="font-['Montserrat',sans-serif] font-bold leading-[100%] tracking-[0%] not-italic text-[40px] text-black text-nowrap uppercase mt-[98px] mb-[45px] text-center">ФУТЕР</p>
       </div>
-      <p className="absolute font-['Montserrat',sans-serif] font-bold leading-[100%] tracking-[0%] left-[calc(50%-72px)] not-italic text-[40px] text-black text-nowrap top-[20px] uppercase">ХЕДЕР</p>
+      <Header />
     </div>
   );
 }
