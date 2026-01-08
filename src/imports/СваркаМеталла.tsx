@@ -805,7 +805,7 @@ function Frame20() {
 function Frame21() {
   return (
     <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
-      <p className="font-['Montserrat:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#d9d9d9] text-[40px] text-nowrap uppercase">/01</p>
+      <p className="font-['Montserrat',sans-serif] font-semibold leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[40px] text-[#d9d9d9] uppercase">/01</p>
       <Frame20 />
     </div>
   );
@@ -845,7 +845,7 @@ function Frame105() {
 function Frame106() {
   return (
     <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
-      <p className="font-['Montserrat:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#d9d9d9] text-[40px] text-nowrap uppercase">/02</p>
+      <p className="font-['Montserrat',sans-serif] font-semibold leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[40px] text-[#d9d9d9] uppercase">/02</p>
       <Frame105 />
     </div>
   );
@@ -885,7 +885,7 @@ function Frame107() {
 function Frame108() {
   return (
     <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
-      <p className="font-['Montserrat:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#d9d9d9] text-[40px] text-nowrap uppercase">/03</p>
+      <p className="font-['Montserrat',sans-serif] font-semibold leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[40px] text-[#d9d9d9] uppercase">/03</p>
       <Frame107 />
     </div>
   );
@@ -925,7 +925,7 @@ function Frame109() {
 function Frame110() {
   return (
     <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
-      <p className="font-['Montserrat:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#d9d9d9] text-[40px] text-nowrap uppercase">/04</p>
+      <p className="font-['Montserrat',sans-serif] font-semibold leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[40px] text-[#d9d9d9] uppercase">/04</p>
       <Frame109 />
     </div>
   );
@@ -965,7 +965,7 @@ function Frame111() {
 function Frame112() {
   return (
     <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
-      <p className="font-['Montserrat:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#d9d9d9] text-[40px] text-nowrap uppercase">/05</p>
+      <p className="font-['Montserrat',sans-serif] font-semibold leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[40px] text-[#d9d9d9] uppercase">/05</p>
       <Frame111 />
     </div>
   );
@@ -1005,7 +1005,7 @@ function Frame113() {
 function Frame114() {
   return (
     <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
-      <p className="font-['Montserrat:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#d9d9d9] text-[40px] text-nowrap uppercase">/06</p>
+      <p className="font-['Montserrat',sans-serif] font-semibold leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[40px] text-[#d9d9d9] uppercase">/06</p>
       <Frame113 />
     </div>
   );
@@ -1045,7 +1045,7 @@ function Frame115() {
 function Frame116() {
   return (
     <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
-      <p className="font-['Montserrat:SemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#d9d9d9] text-[40px] text-nowrap uppercase">/07</p>
+      <p className="font-['Montserrat',sans-serif] font-semibold leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[40px] text-[#d9d9d9] uppercase">/07</p>
       <Frame115 />
     </div>
   );
