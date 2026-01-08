@@ -75,7 +75,7 @@ function Frame3() {
   return (
     <div className="basis-0 content-stretch flex flex-col gap-[10px] grow items-start min-h-px min-w-px relative shrink-0">
       <div className="bg-[#d9d9d9] shrink-0 size-[46px]" />
-      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] min-w-full not-italic relative shrink-0 text-[14px] text-black w-[min-content] break-words">выполнять гибку листа длиной до 2500 мм</p>
+      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] min-w-full not-italic relative shrink-0 text-[14px] text-black w-[min-content] break-words">Выполнять гибку листа длиной до 2500 мм</p>
     </div>
   );
 }
@@ -84,7 +84,7 @@ function Frame8() {
   return (
     <div className="basis-0 content-stretch flex flex-col gap-[10px] grow items-start min-h-px min-w-px relative shrink-0">
       <div className="bg-[#d9d9d9] shrink-0 size-[46px]" />
-      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] min-w-full not-italic relative shrink-0 text-[14px] text-black w-[min-content] break-words">формировать угол от 1° до 180°</p>
+      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] min-w-full not-italic relative shrink-0 text-[14px] text-black w-[min-content] break-words">Формировать угол от 1° до 180°</p>
     </div>
   );
 }
@@ -93,7 +93,7 @@ function Frame9() {
   return (
     <div className="basis-0 content-stretch flex flex-col gap-[10px] grow items-start min-h-px min-w-px relative shrink-0">
       <div className="bg-[#d9d9d9] shrink-0 size-[46px]" />
-      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] min-w-full not-italic relative shrink-0 text-[14px] text-black w-[min-content] break-words">обеспечивать точность до ±0,1 мм</p>
+      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] min-w-full not-italic relative shrink-0 text-[14px] text-black w-[min-content] break-words">Обеспечивать точность до ±0,1 мм</p>
     </div>
   );
 }
@@ -102,7 +102,7 @@ function Frame10() {
   return (
     <div className="basis-0 content-stretch flex flex-col gap-[10px] grow items-start min-h-px min-w-px relative shrink-0">
       <div className="bg-[#d9d9d9] shrink-0 size-[46px]" />
-      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] min-w-full not-italic relative shrink-0 text-[14px] text-black w-[min-content] break-words">изготавливать сложные Z-, V-, U-образные профили</p>
+      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] min-w-full not-italic relative shrink-0 text-[14px] text-black w-[min-content] break-words">Изготавливать сложные Z-, V-, U-образные профили</p>
     </div>
   );
 }
@@ -122,7 +122,7 @@ function Frame128() {
   return (
     <div className="basis-0 content-stretch flex flex-col gap-[10px] grow items-start min-h-px min-w-px relative shrink-0">
       <div className="bg-[#d9d9d9] shrink-0 size-[46px]" />
-      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] min-w-full not-italic relative shrink-0 text-[14px] text-black w-[min-content] break-words">производить крупные и малые партии продукции</p>
+      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] min-w-full not-italic relative shrink-0 text-[14px] text-black w-[min-content] break-words">Производить крупные и малые партии продукции</p>
     </div>
   );
 }
@@ -131,7 +131,7 @@ function Frame129() {
   return (
     <div className="basis-0 content-stretch flex flex-col gap-[10px] grow items-start min-h-px min-w-px relative shrink-0">
       <div className="bg-[#d9d9d9] shrink-0 size-[46px]" />
-      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] min-w-full not-italic relative shrink-0 text-[14px] text-black w-[min-content] break-words">работать по чертежам в форматах: DWG, DXF, STEP, PDF</p>
+      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] min-w-full not-italic relative shrink-0 text-[14px] text-black w-[min-content] break-words">Работать по чертежам в форматах: DWG, DXF, STEP, PDF</p>
     </div>
   );
 }
@@ -167,49 +167,135 @@ function Frame13() {
 
 
 
-function Frame132() {
+function Frame70() {
   return (
-    <div className="basis-0 content-stretch flex flex-col gap-[10px] grow items-start min-h-px min-w-px relative shrink-0">
-      <div className="bg-[#d9d9d9] shrink-0 size-[46px]" />
-      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] min-w-full not-italic relative shrink-0 text-[14px] text-black w-[min-content] break-words">Сталь (1–8 мм)</p>
+    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
+      <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black w-full">Сталь (1–8 мм)</p>
     </div>
   );
 }
 
-function Frame133() {
+function Frame53() {
   return (
-    <div className="basis-0 content-stretch flex flex-col gap-[10px] grow items-start min-h-px min-w-px relative shrink-0">
+    <div className="basis-0 content-stretch flex flex-col grow items-start justify-between min-h-px min-w-px relative shrink-0 w-full">
       <div className="bg-[#d9d9d9] shrink-0 size-[46px]" />
-      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] min-w-full not-italic relative shrink-0 text-[14px] text-black w-[min-content] break-words">Нержавеющая сталь (0,8–4 мм)</p>
+      <Frame70 />
     </div>
   );
 }
 
-function Frame134() {
+function Frame59() {
   return (
-    <div className="basis-0 content-stretch flex flex-col gap-[10px] grow items-start min-h-px min-w-px relative shrink-0">
-      <div className="bg-[#d9d9d9] shrink-0 size-[46px]" />
-      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] min-w-full not-italic relative shrink-0 text-[14px] text-black w-[min-content] break-words">Алюминий (0,5–4 мм)</p>
+    <div className="basis-0 grow h-[199px] min-h-px min-w-px relative shrink-0">
+      <div aria-hidden="true" className="absolute border border-[#bdbdbd] border-solid inset-0 pointer-events-none" />
+      <div className="flex flex-col justify-center size-full">
+        <div className="content-stretch flex flex-col items-start justify-center p-[13px] relative size-full">
+          <Frame53 />
+        </div>
+      </div>
     </div>
   );
 }
 
-function Frame135() {
+function Frame71() {
   return (
-    <div className="basis-0 content-stretch flex flex-col gap-[10px] grow items-start min-h-px min-w-px relative shrink-0">
-      <div className="bg-[#d9d9d9] shrink-0 size-[46px]" />
-      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] min-w-full not-italic relative shrink-0 text-[14px] text-black w-[min-content] break-words">Оцинкованная сталь (0,5–3 мм)</p>
+    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
+      <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black w-full">Нержавеющая сталь</p>
+      <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black w-full">(0,8–4 мм)</p>
     </div>
   );
 }
 
-function Frame136() {
+function Frame72() {
+  return (
+    <div className="basis-0 content-stretch flex flex-col grow items-start justify-between min-h-px min-w-px relative shrink-0 w-full">
+      <div className="bg-[#d9d9d9] shrink-0 size-[46px]" />
+      <Frame71 />
+    </div>
+  );
+}
+
+function Frame60() {
+  return (
+    <div className="basis-0 grow h-[199px] min-h-px min-w-px relative shrink-0">
+      <div aria-hidden="true" className="absolute border border-[#bdbdbd] border-solid inset-0 pointer-events-none" />
+      <div className="flex flex-col justify-center size-full">
+        <div className="content-stretch flex flex-col items-start justify-center p-[13px] relative size-full">
+          <Frame72 />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Frame73() {
+  return (
+    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
+      <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black w-full">Алюминий (0,5–4 мм)</p>
+    </div>
+  );
+}
+
+function Frame74() {
+  return (
+    <div className="basis-0 content-stretch flex flex-col grow items-start justify-between min-h-px min-w-px relative shrink-0 w-full">
+      <div className="bg-[#d9d9d9] shrink-0 size-[46px]" />
+      <Frame73 />
+    </div>
+  );
+}
+
+function Frame58() {
+  return (
+    <div className="basis-0 grow h-[199px] min-h-px min-w-px relative shrink-0">
+      <div aria-hidden="true" className="absolute border border-[#bdbdbd] border-solid inset-0 pointer-events-none" />
+      <div className="flex flex-col justify-center size-full">
+        <div className="content-stretch flex flex-col items-start justify-center p-[13px] relative size-full">
+          <Frame74 />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Frame75() {
+  return (
+    <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
+      <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black w-full">Оцинкованная сталь</p>
+      <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black w-full">(0,5–3 мм)</p>
+    </div>
+  );
+}
+
+function Frame76() {
+  return (
+    <div className="basis-0 content-stretch flex flex-col grow items-start justify-between min-h-px min-w-px relative shrink-0 w-full">
+      <div className="bg-[#d9d9d9] shrink-0 size-[46px]" />
+      <Frame75 />
+    </div>
+  );
+}
+
+function Frame57() {
+  return (
+    <div className="basis-0 grow h-[199px] min-h-px min-w-px relative shrink-0">
+      <div aria-hidden="true" className="absolute border border-[#bdbdbd] border-solid inset-0 pointer-events-none" />
+      <div className="flex flex-col justify-center size-full">
+        <div className="content-stretch flex flex-col items-start justify-center p-[13px] relative size-full">
+          <Frame76 />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Frame77() {
   return (
     <div className="content-stretch flex gap-[20px] items-start relative shrink-0 w-full">
-      <Frame132 />
-      <Frame133 />
-      <Frame134 />
-      <Frame135 />
+      <Frame59 />
+      <Frame60 />
+      <Frame58 />
+      <Frame57 />
     </div>
   );
 }
@@ -220,7 +306,7 @@ function Frame51() {
       <div className="size-full">
         <div className="content-stretch flex flex-col gap-[22px] items-start p-[30px] relative w-full">
           <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[40px] text-black uppercase w-full">Материалы, с которыми работаем</p>
-          <Frame136 />
+          <Frame77 />
         </div>
       </div>
     </div>
@@ -752,40 +838,6 @@ function Frame138() {
   );
 }
 
-function Frame139() {
-  const services = [
-    "лазерная резка металла",
-    "сварка MIG/TIG",
-    "разработка чертежей",
-  ];
-
-  return (
-    <div className="content-stretch flex flex-col gap-[22px] items-start relative shrink-0 w-full">
-      <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[40px] text-black uppercase w-full">Дополнительные услуги</p>
-      <p className="font-['Montserrat',sans-serif] font-normal leading-[120%] tracking-[0%] not-italic relative shrink-0 text-[20px] text-black w-full">Чтобы клиент получил изделие «под ключ»:</p>
-      <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full">
-        {services.map((service, index) => (
-          <p key={index} className="font-['Montserrat',sans-serif] font-normal leading-[120%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black w-full">• {service}</p>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function Frame118() {
-  return (
-    <div className="content-stretch flex flex-col gap-[39px] items-start relative shrink-0 w-full max-w-[1333px]">
-      <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[40px] text-black uppercase w-full">Сертификаты и документы</p>
-      <p className="font-['Montserrat',sans-serif] font-normal leading-[120%] tracking-[0%] not-italic relative shrink-0 text-[20px] text-black w-full">На странице можно разместить:</p>
-      <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full">
-        <p className="font-['Montserrat',sans-serif] font-normal leading-[120%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black w-full">• сертификаты на металл</p>
-        <p className="font-['Montserrat',sans-serif] font-normal leading-[120%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black w-full">• декларации соответствия на оборудование</p>
-        <p className="font-['Montserrat',sans-serif] font-normal leading-[120%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black w-full">• внутренние стандарты качества</p>
-      </div>
-      <Frame39 />
-    </div>
-  );
-}
 
 function Frame119() {
   return (
@@ -942,13 +994,6 @@ function Frame46() {
   );
 }
 
-function Frame127() {
-  return (
-    <div className="absolute bg-white flex flex-col items-center justify-center left-[15px] px-[12px] py-[10px] z-10 bottom-[80px]">
-      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic text-[18px] text-black whitespace-nowrap">+375 (XX) XXX-XX-XX</p>
-    </div>
-  );
-}
 
 function Frame123() {
   return (
@@ -958,7 +1003,6 @@ function Frame123() {
           <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[24px] text-black text-nowrap">{`Фото менеджера `}</p>
           <Frame45 />
           <Frame46 />
-          <Frame127 />
         </div>
       </div>
     </div>
@@ -1281,7 +1325,6 @@ function Frame50() {
   return (
     <div className="content-stretch flex flex-col gap-[39px] items-start relative shrink-0 w-full max-w-[1333px]">
       <p className="font-['Montserrat:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[40px] text-black uppercase w-full">Остались вопросы?</p>
-      <p className="font-['Montserrat',sans-serif] font-normal leading-[120%] tracking-[0%] not-italic relative shrink-0 text-[20px] text-black">Менеджер Алексей — старший менеджер компании.</p>
       <Frame49 
         formData={formData} 
         setFormData={setFormData} 
@@ -1306,9 +1349,7 @@ function Frame62() {
       <Frame138 />
       <Frame97 />
       <Frame104 />
-      <Frame139 />
       <Frame30 />
-      <Frame118 />
       <Frame122 />
       <Frame50 />
     </div>
@@ -1320,7 +1361,7 @@ export default function GibkaMetalla() {
     <div className="bg-white relative size-full" data-name="Гибка металла">
       <div className="w-full max-w-[1385px] mx-auto p-[26px] pt-[124px]">
         <Frame62 />
-        <p className="font-['Montserrat',sans-serif] font-bold leading-[100%] tracking-[0%] not-italic text-[40px] text-black text-nowrap uppercase mt-[98px] mb-[45px] text-center">ФУТЕР</p>
+        <p className="font-['Montserrat',sans-serif] font-bold leading-[100%] tracking-[0%] not-italic text-[40px] text-black text-nowrap uppercase mt-[98px] mb-[20px] text-center">ФУТЕР</p>
       </div>
       <Header />
     </div>
