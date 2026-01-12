@@ -246,7 +246,7 @@ function Frame66() {
 
 function Frame67() {
   return (
-    <div className="basis-0 grow h-[129px] min-h-px min-w-px relative shrink-0">
+    <div className="basis-0 grow min-h-px min-w-px relative shrink-0 h-full">
       <div aria-hidden="true" className="absolute border border-[#d9d9d9] border-solid inset-0 pointer-events-none" />
       <div className="size-full">
         <div className="content-stretch flex flex-col items-start p-[9px] relative size-full">
@@ -259,7 +259,7 @@ function Frame67() {
 
 function Frame37() {
   return (
-    <div className="content-stretch flex items-start relative shrink-0 w-full">
+    <div className="content-stretch flex items-start relative shrink-0 w-full grow">
       <Frame67 />
     </div>
   );
@@ -267,7 +267,7 @@ function Frame37() {
 
 function Frame38() {
   return (
-    <div className="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-full grow">
       <Frame35 />
       <Frame36 />
       <Frame37 />
@@ -277,7 +277,7 @@ function Frame38() {
 
 function Frame19() {
   return (
-    <div className="basis-0 content-stretch flex flex-col gap-[22px] grow items-start min-h-px min-w-px relative shrink-0">
+    <div className="basis-0 content-stretch flex flex-col gap-[22px] grow items-start min-h-px min-w-px relative shrink-0 self-stretch">
       <p className="font-['Montserrat:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[40px] text-black uppercase w-full">Преимущества работы с нами</p>
       <Frame38 />
     </div>
@@ -286,7 +286,7 @@ function Frame19() {
 
 function Frame16() {
   return (
-    <div className="basis-0 content-stretch flex gap-[20px] grow items-start min-h-px min-w-px relative shrink-0">
+    <div className="basis-0 content-stretch flex gap-[20px] grow items-stretch min-h-px min-w-px relative shrink-0">
       <Frame4 />
       <Frame19 />
     </div>

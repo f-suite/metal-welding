@@ -228,7 +228,7 @@ function Frame66() {
 
 function Frame67() {
   return (
-    <div className="flex flex-col h-[129px] items-start px-[12px] pt-[10px] pb-[10px] relative shrink-0 w-full max-w-[653px] overflow-hidden">
+    <div className="flex flex-col h-full items-start px-[12px] pt-[10px] pb-[10px] relative w-full max-w-[653px] overflow-hidden">
       <div aria-hidden="true" className="absolute border border-[#d9d9d9] border-solid inset-0 pointer-events-none" />
       <Frame66 />
     </div>
@@ -237,7 +237,7 @@ function Frame67() {
 
 function Frame38() {
   return (
-    <div className="content-stretch flex flex-col gap-[30px] items-start relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col gap-[30px] items-start relative shrink-0 w-full h-full">
       <div className="flex gap-[33px] items-start relative shrink-0">
         <div className="flex flex-col gap-[30px] items-start relative shrink-0 w-[310px]">
           <Frame33 />
@@ -248,23 +248,27 @@ function Frame38() {
           <Frame65 />
         </div>
       </div>
-      <Frame67 />
+      <div className="flex items-stretch relative w-full flex-1 min-h-0">
+        <Frame67 />
+      </div>
     </div>
   );
 }
 
 function Frame19() {
   return (
-    <div className="flex flex-col gap-[40px] items-start relative shrink-0 w-[653px]">
+    <div className="flex flex-col gap-[40px] items-start relative shrink-0 w-[653px] self-stretch">
       <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[40px] text-black uppercase w-full">Преимущества работы с нами</p>
-      <Frame38 />
+      <div className="flex flex-col flex-1 min-h-0 relative shrink-0 w-full">
+        <Frame38 />
+      </div>
     </div>
   );
 }
 
 function Frame16() {
   return (
-    <div className="flex gap-[30px] items-start relative shrink-0 max-w-[1333px]">
+    <div className="flex gap-[30px] items-stretch relative shrink-0 max-w-[1333px]">
       <Frame4 />
       <Frame19 />
     </div>
