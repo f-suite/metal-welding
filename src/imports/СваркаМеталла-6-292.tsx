@@ -139,7 +139,7 @@ function Frame13() {
 
 function Frame4() {
   return (
-    <div className="bg-[#d9d9d9] flex h-[577px] items-center justify-center px-[280px] py-[204px] relative shrink-0 w-[650px]">
+    <div className="bg-[#d9d9d9] flex h-[577px] items-center justify-center px-[280px] py-[204px] relative shrink-0 w-full max-w-[650px]">
       <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[24px] text-black text-nowrap">Фото (контент)</p>
     </div>
   );
@@ -156,7 +156,7 @@ function Frame32() {
 
 function Frame33() {
   return (
-    <div className="flex flex-col h-[129px] items-start px-[12px] pt-[10px] pb-[10px] relative shrink-0 w-[310px] overflow-hidden">
+    <div className="flex flex-col h-[129px] items-start px-[12px] pt-[10px] pb-[10px] relative shrink-0 w-full max-w-[310px] overflow-hidden">
       <div aria-hidden="true" className="absolute border border-[#d9d9d9] border-solid inset-0 pointer-events-none" />
       <Frame32 />
     </div>
@@ -174,7 +174,7 @@ function Frame55() {
 
 function Frame34() {
   return (
-    <div className="flex flex-col h-[129px] items-start px-[12px] pt-[10px] pb-[10px] relative shrink-0 w-[310px] overflow-hidden">
+    <div className="flex flex-col h-[129px] items-start px-[12px] pt-[10px] pb-[10px] relative shrink-0 w-full max-w-[310px] overflow-hidden">
       <div aria-hidden="true" className="absolute border border-[#d9d9d9] border-solid inset-0 pointer-events-none" />
       <Frame55 />
     </div>
@@ -192,7 +192,7 @@ function Frame56() {
 
 function Frame63() {
   return (
-    <div className="flex flex-col h-[129px] items-start px-[12px] pt-[10px] pb-[10px] relative shrink-0 w-[310px] overflow-hidden">
+    <div className="flex flex-col h-[129px] items-start px-[12px] pt-[10px] pb-[10px] relative shrink-0 w-full max-w-[310px] overflow-hidden">
       <div aria-hidden="true" className="absolute border border-[#d9d9d9] border-solid inset-0 pointer-events-none" />
       <Frame56 />
     </div>
@@ -210,7 +210,7 @@ function Frame64() {
 
 function Frame65() {
   return (
-    <div className="flex flex-col h-[129px] items-start px-[12px] pt-[10px] pb-[10px] relative shrink-0 w-[310px] overflow-hidden">
+    <div className="flex flex-col h-[129px] items-start px-[12px] pt-[10px] pb-[10px] relative shrink-0 w-full max-w-[310px] overflow-hidden">
       <div aria-hidden="true" className="absolute border border-[#d9d9d9] border-solid inset-0 pointer-events-none" />
       <Frame64 />
     </div>
@@ -238,12 +238,12 @@ function Frame67() {
 function Frame38() {
   return (
     <div className="content-stretch flex flex-col gap-[30px] items-start relative shrink-0 w-full h-full">
-      <div className="flex gap-[33px] items-start relative shrink-0">
-        <div className="flex flex-col gap-[30px] items-start relative shrink-0 w-[310px]">
+      <div className="flex gap-[33px] items-start relative shrink-0 w-full">
+        <div className="flex flex-col gap-[30px] items-start relative shrink-0 w-full max-w-[310px]">
           <Frame33 />
           <Frame63 />
         </div>
-        <div className="flex flex-col gap-[30px] items-start relative shrink-0 w-[310px]">
+        <div className="flex flex-col gap-[30px] items-start relative shrink-0 w-full max-w-[310px]">
           <Frame34 />
           <Frame65 />
         </div>
@@ -257,7 +257,7 @@ function Frame38() {
 
 function Frame19() {
   return (
-    <div className="flex flex-col gap-[40px] items-start relative shrink-0 w-[653px] self-stretch">
+    <div className="flex flex-col gap-[40px] items-start relative shrink-0 w-full max-w-[653px] self-stretch">
       <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[40px] text-black uppercase w-full">Преимущества работы с нами</p>
       <div className="flex flex-col flex-1 min-h-0 relative shrink-0 w-full">
         <Frame38 />
@@ -636,7 +636,7 @@ function Frame91() {
 
 function Frame18() {
   return (
-    <div className="content-stretch flex gap-[60px] items-center relative shrink-0 w-[446px]">
+    <div className="content-stretch flex gap-[60px] items-center relative shrink-0 w-full max-w-[446px]">
       <Frame89 />
       <Frame91 />
     </div>
@@ -684,7 +684,7 @@ function Frame94() {
 
 function Frame95() {
   return (
-    <div className="bg-[#d9d9d9] h-[325px] relative shrink-0 w-[680px]">
+    <div className="bg-[#d9d9d9] h-[325px] relative shrink-0 w-full max-w-[680px]">
       <div className="flex flex-row items-center justify-center size-full">
         <div className="content-stretch flex items-center justify-center px-[280px] py-[204px] relative size-full">
           <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[24px] text-black text-nowrap">Фото (контент)</p>
@@ -777,7 +777,7 @@ function Frame104() {
 
 function Frame20() {
   return (
-    <div className="content-stretch flex items-center justify-between relative shrink-0 w-[794px]">
+    <div className="content-stretch flex items-center justify-between relative shrink-0 w-full max-w-[794px]">
       <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[22px] text-black text-nowrap">Запрос или звонок</p>
       <div className="bg-[#d9d9d9] shrink-0 size-[14px]" />
     </div>
@@ -817,7 +817,7 @@ function Frame22() {
 
 function Frame105() {
   return (
-    <div className="content-stretch flex items-center justify-between relative shrink-0 w-[794px]">
+    <div className="content-stretch flex items-center justify-between relative shrink-0 w-full max-w-[794px]">
       <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[22px] text-black break-words">Получение чертежа / разработка ТЗ</p>
       <div className="bg-[#d9d9d9] shrink-0 size-[14px]" />
     </div>
@@ -857,7 +857,7 @@ function Frame23() {
 
 function Frame107() {
   return (
-    <div className="content-stretch flex items-center justify-between relative shrink-0 w-[794px]">
+    <div className="content-stretch flex items-center justify-between relative shrink-0 w-full max-w-[794px]">
       <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[22px] text-black break-words">Расчет стоимости и сроков</p>
       <div className="bg-[#d9d9d9] shrink-0 size-[14px]" />
     </div>
@@ -897,7 +897,7 @@ function Frame24() {
 
 function Frame109() {
   return (
-    <div className="content-stretch flex items-center justify-between relative shrink-0 w-[794px]">
+    <div className="content-stretch flex items-center justify-between relative shrink-0 w-full max-w-[794px]">
       <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[22px] text-black break-words">Подготовка деталей</p>
       <div className="bg-[#d9d9d9] shrink-0 size-[14px]" />
     </div>
@@ -937,7 +937,7 @@ function Frame25() {
 
 function Frame111() {
   return (
-    <div className="content-stretch flex items-center justify-between relative shrink-0 w-[794px]">
+    <div className="content-stretch flex items-center justify-between relative shrink-0 w-full max-w-[794px]">
       <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[22px] text-black break-words">Сварочные работы</p>
       <div className="bg-[#d9d9d9] shrink-0 size-[14px]" />
     </div>
@@ -977,7 +977,7 @@ function Frame26() {
 
 function Frame113() {
   return (
-    <div className="content-stretch flex items-center justify-between relative shrink-0 w-[794px]">
+    <div className="content-stretch flex items-center justify-between relative shrink-0 w-full max-w-[794px]">
       <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[22px] text-black break-words">Зачистка, покраска, контроль качества</p>
       <div className="bg-[#d9d9d9] shrink-0 size-[14px]" />
     </div>
@@ -1017,7 +1017,7 @@ function Frame27() {
 
 function Frame115() {
   return (
-    <div className="content-stretch flex items-center justify-between relative shrink-0 w-[794px]">
+    <div className="content-stretch flex items-center justify-between relative shrink-0 w-full max-w-[794px]">
       <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[22px] text-black break-words">Выдача или доставка заказа</p>
       <div className="bg-[#d9d9d9] shrink-0 size-[18px]" />
     </div>
@@ -1180,7 +1180,7 @@ function Frame40({ onPrev, onNext }: { onPrev: () => void; onNext: () => void })
 
 function Frame41({ onPrev, onNext }: { onPrev: () => void; onNext: () => void }) {
   return (
-    <div className="content-stretch flex flex-col items-start justify-between relative self-stretch shrink-0 min-w-[289px]">
+    <div className="content-stretch flex flex-col items-start justify-between relative self-stretch shrink-0 w-full max-w-[289px]">
       <Frame119 />
       <Frame40 onPrev={onPrev} onNext={onNext} />
     </div>
@@ -1271,7 +1271,7 @@ function Frame46() {
 
 function Frame123() {
   return (
-    <div className="bg-[#d9d9d9] h-[361px] relative shrink-0 w-[654px]">
+    <div className="bg-[#d9d9d9] h-[361px] relative shrink-0 w-full max-w-[654px]">
       <div className="flex flex-row items-center justify-center size-full">
         <div className="content-stretch flex gap-[10px] items-center justify-center px-[280px] py-[204px] relative size-full">
           <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[24px] text-black text-nowrap">{`Фото менеджера `}</p>
@@ -1363,8 +1363,8 @@ function Container3({ value, onChange }: { value: string; onChange: (e: React.Ch
   );
 }
 
-function Frame47({ formData, setFormData, errors, handleNameChange, handlePhoneChange }: { 
-  formData: { name: string; phone: string; comments: string }; 
+function Frame47({ formData, setFormData, errors, handleNameChange, handlePhoneChange }: {
+  formData: { name: string; phone: string; comments: string };
   setFormData: React.Dispatch<React.SetStateAction<{ name: string; phone: string; comments: string }>>;
   errors: { name?: string; phone?: string };
   handleNameChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -1372,19 +1372,19 @@ function Frame47({ formData, setFormData, errors, handleNameChange, handlePhoneC
 }) {
   return (
     <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full">
-      <Container 
-        value={formData.name} 
+      <Container
+        value={formData.name}
         onChange={handleNameChange}
         error={errors.name}
       />
-      <Container2 
-        value={formData.phone} 
+      <Container2
+        value={formData.phone}
         onChange={handlePhoneChange}
         error={errors.phone}
       />
-      <Container3 
-        value={formData.comments} 
-        onChange={(e) => setFormData({ ...formData, comments: e.target.value })} 
+      <Container3
+        value={formData.comments}
+        onChange={(e) => setFormData({ ...formData, comments: e.target.value })}
       />
     </div>
   );
@@ -1404,8 +1404,8 @@ function Frame124() {
 
 function Frame125({ isSubmitting }: { isSubmitting: boolean }) {
   return (
-    <button 
-      type="submit" 
+    <button
+      type="submit"
       disabled={isSubmitting}
       className="content-stretch flex gap-[6px] items-center relative shrink-0 cursor-pointer hover:opacity-80 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
     >
@@ -1417,8 +1417,8 @@ function Frame125({ isSubmitting }: { isSubmitting: boolean }) {
   );
 }
 
-function Frame48({ formData, setFormData, handleSubmit, errors, handleNameChange, handlePhoneChange, isSubmitting }: { 
-  formData: { name: string; phone: string; comments: string }; 
+function Frame48({ formData, setFormData, handleSubmit, errors, handleNameChange, handlePhoneChange, isSubmitting }: {
+  formData: { name: string; phone: string; comments: string };
   setFormData: React.Dispatch<React.SetStateAction<{ name: string; phone: string; comments: string }>>;
   handleSubmit: (e: FormEvent) => void;
   errors: { name?: string; phone?: string };
@@ -1427,10 +1427,10 @@ function Frame48({ formData, setFormData, handleSubmit, errors, handleNameChange
   isSubmitting: boolean;
 }) {
   return (
-    <form onSubmit={handleSubmit} className="content-stretch flex flex-col gap-[37px] items-start relative shrink-0 w-[654px]">
-      <Frame47 
-        formData={formData} 
-        setFormData={setFormData} 
+    <form onSubmit={handleSubmit} className="content-stretch flex flex-col gap-[37px] items-start relative shrink-0 w-full max-w-[654px]">
+      <Frame47
+        formData={formData}
+        setFormData={setFormData}
         errors={errors}
         handleNameChange={handleNameChange}
         handlePhoneChange={handlePhoneChange}
@@ -1440,8 +1440,8 @@ function Frame48({ formData, setFormData, handleSubmit, errors, handleNameChange
   );
 }
 
-function Frame49({ formData, setFormData, handleSubmit, errors, handleNameChange, handlePhoneChange, isSubmitting }: { 
-  formData: { name: string; phone: string; comments: string }; 
+function Frame49({ formData, setFormData, handleSubmit, errors, handleNameChange, handlePhoneChange, isSubmitting }: {
+  formData: { name: string; phone: string; comments: string };
   setFormData: React.Dispatch<React.SetStateAction<{ name: string; phone: string; comments: string }>>;
   handleSubmit: (e: FormEvent) => void;
   errors: { name?: string; phone?: string };
@@ -1452,10 +1452,10 @@ function Frame49({ formData, setFormData, handleSubmit, errors, handleNameChange
   return (
     <div className="content-stretch flex items-start justify-between gap-[25px] relative shrink-0 w-full">
       <Frame123 />
-      <Frame48 
-        formData={formData} 
-        setFormData={setFormData} 
-        handleSubmit={handleSubmit} 
+      <Frame48
+        formData={formData}
+        setFormData={setFormData}
+        handleSubmit={handleSubmit}
         errors={errors}
         handleNameChange={handleNameChange}
         handlePhoneChange={handlePhoneChange}
@@ -1494,13 +1494,13 @@ function Frame50() {
     if (!phone.trim()) {
       return "Телефон обязателен для заполнения";
     }
-    
+
     const trimmed = phone.trim();
-    
+
     // Строгая проверка: только +375######### (13 символов) или 80######### (11 символов)
     // +375 + 9 цифр = 13 символов
     // 80 + 9 цифр = 11 символов
-    
+
     if (trimmed.startsWith('+')) {
       // Если начинается с +, должно быть ровно 13 символов
       if (trimmed.length !== 13) {
@@ -1527,34 +1527,34 @@ function Frame50() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    
+
     // Валидация полей
     const nameError = validateName(formData.name);
     const phoneError = validatePhone(formData.phone);
-    
+
     const newErrors: { name?: string; phone?: string } = {};
     if (nameError) newErrors.name = nameError;
     if (phoneError) newErrors.phone = phoneError;
-    
+
     setErrors(newErrors);
-    
+
     // Если есть ошибки, не отправляем форму
     if (nameError || phoneError) {
       return;
     }
-    
+
     setIsSubmitting(true);
-    
+
     try {
       // Проверка конфигурации
       if (emailjsConfig.publicKey === "YOUR_PUBLIC_KEY" || !emailjsConfig.publicKey) {
         throw new Error("Public Key не настроен. Пожалуйста, настройте VITE_EMAILJS_PUBLIC_KEY в .env файле или в конфигурации.");
       }
-      
+
       if (emailjsConfig.templateId === "YOUR_TEMPLATE_ID" || !emailjsConfig.templateId) {
         throw new Error("Template ID не настроен. Пожалуйста, настройте VITE_EMAILJS_TEMPLATE_ID в .env файле или в конфигурации.");
       }
-      
+
       // Параметры для шаблона email
       const templateParams = {
         from_name: formData.name,
@@ -1562,14 +1562,14 @@ function Frame50() {
         message: formData.comments || "Комментарий не указан",
         to_email: emailjsConfig.toEmail,
       };
-      
+
       console.log("Отправка email с параметрами:", {
         serviceId: emailjsConfig.serviceId,
         templateId: emailjsConfig.templateId,
         publicKey: emailjsConfig.publicKey ? "установлен" : "не установлен",
         params: templateParams
       });
-      
+
       // Отправка email (в версии 4.x publicKey передается как опция)
       const response = await emailjs.send(
         emailjsConfig.serviceId,
@@ -1579,19 +1579,19 @@ function Frame50() {
           publicKey: emailjsConfig.publicKey,
         }
       );
-      
+
       console.log("Email успешно отправлен:", response);
-      
+
       // Успешная отправка
       alert(`Спасибо, ${formData.name}! Мы свяжемся с вами по номеру ${formData.phone}`);
       setFormData({ name: "", phone: "", comments: "" });
       setErrors({});
     } catch (error: any) {
       console.error("Ошибка отправки формы:", error);
-      
+
       // Детальная информация об ошибке
       let errorMessage = "Произошла ошибка при отправке формы.";
-      
+
       if (error?.text) {
         errorMessage += `\n\nДетали: ${error.text}`;
         console.error("Детали ошибки EmailJS:", error.text);
@@ -1602,7 +1602,7 @@ function Frame50() {
         errorMessage += `\n\nКод ошибки: ${error.status}`;
         console.error("Код ошибки:", error.status);
       }
-      
+
       // Проверка конкретных ошибок
       if (error?.text?.includes("Invalid Public Key") || error?.text?.includes("public key")) {
         errorMessage = "Ошибка: Неверный Public Key. Проверьте настройки в EmailJS Dashboard.";
@@ -1611,7 +1611,7 @@ function Frame50() {
       } else if (error?.text?.includes("Template not found") || error?.text?.includes("template")) {
         errorMessage = "Ошибка: Template ID не найден. Проверьте правильность Template ID.";
       }
-      
+
       alert(errorMessage + "\n\nПожалуйста, попробуйте позже или свяжитесь с нами по телефону.");
     } finally {
       setIsSubmitting(false);
@@ -1642,10 +1642,10 @@ function Frame50() {
   return (
     <div className="content-stretch flex flex-col gap-[39px] items-start relative shrink-0 w-full max-w-[1333px]">
       <p className="font-['Montserrat:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[40px] text-black uppercase w-full">Остались вопросы?</p>
-      <Frame49 
-        formData={formData} 
-        setFormData={setFormData} 
-        handleSubmit={handleSubmit} 
+      <Frame49
+        formData={formData}
+        setFormData={setFormData}
+        handleSubmit={handleSubmit}
         errors={errors}
         handleNameChange={handleNameChange}
         handlePhoneChange={handlePhoneChange}
@@ -1676,7 +1676,7 @@ function Frame62() {
 
 export default function Component() {
   return (
-    <div className="bg-white relative size-full" data-name="Сварка металла">
+    <div className="bg-white relative size-full overflow-x-hidden" data-name="Сварка металла">
       <div className="w-full max-w-[1385px] mx-auto p-[26px] pt-[124px]">
         <Frame62 />
         <p className="font-['Montserrat',sans-serif] font-bold leading-[100%] tracking-[0%] not-italic text-[40px] text-black text-nowrap uppercase mt-[98px] mb-[20px] text-center">ФУТЕР</p>
