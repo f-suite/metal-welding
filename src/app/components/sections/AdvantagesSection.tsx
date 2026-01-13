@@ -101,7 +101,7 @@ export function AdvantagesSection() {
           <SectionHeading text={contentData.advantages.title} />
           
           {/* Mobile/Tablet image (below title) */}
-          <div className="lg:hidden w-full bg-[#d9d9d9] aspect-square relative overflow-hidden rounded-lg">
+          <div className="lg:hidden w-full bg-[#d9d9d9] aspect-square relative overflow-hidden">
             {hasImage ? (
               <img
                 src={contentData.advantages.imageUrl}

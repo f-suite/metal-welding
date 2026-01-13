@@ -51,7 +51,7 @@ export function HeroSection() {
         <p className="mb-0 font-bold">{title}</p>
       </div>
       {/* Mobile image */}
-      <div className="md:hidden w-full bg-[#d9d9d9] h-[240px] sm:h-[300px] relative overflow-hidden rounded-lg">
+      <div className="md:hidden w-full bg-[#d9d9d9] h-[240px] sm:h-[300px] relative overflow-hidden">
         {imageUrl ? (
           <img
             src={imageUrl}

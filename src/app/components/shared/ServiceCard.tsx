@@ -9,7 +9,7 @@ export function ServiceCard({ image, title, description }: ServiceCardProps) {
   
   return (
     <div className="w-full sm:w-[calc(50%-10px)] lg:basis-0 content-stretch flex flex-col gap-2 sm:gap-2.5 md:gap-[10px] lg:grow items-start min-h-px min-w-px relative">
-      <div className="bg-[#d9d9d9] h-[160px] sm:h-[180px] md:h-[199px] w-full overflow-hidden flex items-center justify-center rounded-lg">
+      <div className="bg-[#d9d9d9] h-[160px] sm:h-[180px] md:h-[199px] w-full overflow-hidden flex items-center justify-center">
         {hasImage ? (
           <img 
             src={image} 
