@@ -1,0 +1,12 @@
+export { HeroSection } from "./HeroSection";
+export { CapabilitiesSection } from "./CapabilitiesSection";
+export { AdvantagesSection } from "./AdvantagesSection";
+export { ServicesSection } from "./ServicesSection";
+export { MaterialsSection } from "./MaterialsSection";
+export { ProductsSection } from "./ProductsSection";
+export { TimelineSection } from "./TimelineSection";
+export { GuaranteesSection } from "./GuaranteesSection";
+export { WorkflowSection } from "./WorkflowSection";
+export { CertificatesSection } from "./CertificatesSection";
+export { GallerySection } from "./GallerySection";
+export { ContactSection } from "./ContactSection";
