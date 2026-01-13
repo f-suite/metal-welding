@@ -33,7 +33,7 @@ export function CertificatesSection() {
   return (
     <div className="content-stretch flex flex-col gap-6 sm:gap-8 md:gap-[39px] items-start relative w-full max-w-[1333px]">
       <SectionHeading text={contentData.certificates.title} />
-      <div className="content-stretch flex flex-wrap gap-4 sm:gap-5 lg:gap-[20px] items-start relative w-full">
+      <div className="content-stretch flex flex-wrap justify-center gap-4 sm:gap-5 lg:gap-[20px] items-start relative w-full">
         {[...Array(count).keys()].map((_, i) => (
           <CertificateItem key={i} imageUrl={images[i]} imageAlt={contentData.certificates.imageAlt} />
         ))}
