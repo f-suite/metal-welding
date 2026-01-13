@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import СваркаМеталла from "../imports/СваркаМеталла-6-292";
+import WeldingPage from "./pages/WeldingPage";
 import ProizvodstvoMetallokonstrukcij from "./pages/ProizvodstvoMetallokonstrukcij";
 import LazernayaRezka from "./pages/LazernayaRezka";
 import GibkaMetalla from "./pages/GibkaMetalla";
@@ -10,7 +10,7 @@ export default function App() {
     <BrowserRouter>
       <div className="size-full">
         <Routes>
-          <Route path="/" element={<СваркаМеталла />} />
+          <Route path="/" element={<WeldingPage />} />
           <Route path="/proizvodstvo-metallokonstrukcij" element={<ProizvodstvoMetallokonstrukcij />} />
           <Route path="/lazernaya-rezka" element={<LazernayaRezka />} />
           <Route path="/gibka-metalla" element={<GibkaMetalla />} />

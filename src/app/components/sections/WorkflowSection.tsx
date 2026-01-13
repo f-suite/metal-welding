@@ -7,7 +7,7 @@ export function WorkflowSection() {
     <div className="content-stretch flex flex-col gap-[39px] items-start relative shrink-0 w-full max-w-[1333px]">
       <SectionHeading text={contentData.workflow.title} />
       <div className="content-stretch flex flex-col items-start relative shrink-0 w-full max-w-[1333px]">
-        {contentData.workflow.steps.map((step, index) => (
+        {contentData.workflow.steps.map((step: any, index: number) => (
           <WorkflowStep key={index} number={step.number} title={step.title} />
         ))}
       </div>

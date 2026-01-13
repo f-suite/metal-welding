@@ -12,7 +12,7 @@ export function MaterialsSection() {
             {contentData.materials.subtitle}
           </p>
           <div className="content-stretch flex gap-[20px] items-start relative shrink-0 w-full">
-            {contentData.materials.items.map((material, index) => (
+            {contentData.materials.items.map((material: string, index: number) => (
               <MaterialCard key={index} name={material} />
             ))}
           </div>
