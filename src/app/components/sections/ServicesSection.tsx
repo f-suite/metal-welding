@@ -1,7 +1,9 @@
 import { SectionHeading, ServiceCard } from "../shared";
-import contentData from "../../../content/welding.json";
+import { usePageContent } from "../../../contexts/PageContentContext";
 
 export function ServicesSection() {
+  const contentData = usePageContent();
+
   return (
     <div className="content-stretch flex flex-col gap-[22px] items-start relative shrink-0 w-full">
       <SectionHeading text={contentData.services.title} />

@@ -1,7 +1,8 @@
 import { SectionHeading, WorkflowStep } from "../shared";
-import contentData from "../../../content/welding.json";
+import { usePageContent } from "../../../contexts/PageContentContext";
 
 export function WorkflowSection() {
+  const contentData = usePageContent();
   return (
     <div className="content-stretch flex flex-col gap-[39px] items-start relative shrink-0 w-full max-w-[1333px]">
       <SectionHeading text={contentData.workflow.title} />

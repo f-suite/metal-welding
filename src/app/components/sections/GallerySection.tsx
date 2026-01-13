@@ -2,15 +2,15 @@ import { useRef } from "react";
 import Slider from "react-slick";
 import { ArrowForwardIos } from "../icons";
 import { GALLERY_SLIDER_SETTINGS } from "../../../constants/slider";
-import contentData from "../../../content/welding.json";
+import { usePageContent } from "../../../contexts/PageContentContext";
 
-function GalleryImage() {
+function GalleryImage({ imageAlt }: { imageAlt: string }) {
   return (
     <div className="bg-[#d9d9d9] h-[361px] relative shrink-0 w-full">
       <div className="flex flex-row items-center justify-center size-full">
         <div className="content-stretch flex items-center justify-center px-[280px] py-[204px] relative size-full">
           <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[24px] text-black text-nowrap">
-            {contentData.gallery.imageAlt}
+            {imageAlt}
           </p>
         </div>
       </div>
@@ -41,7 +41,17 @@ function GalleryControls({ onPrev, onNext }: { onPrev: () => void; onNext: () =>
   );
 }
 
-function GallerySlider({ sliderRef }: { sliderRef: React.RefObject<Slider> }) {
+function GallerySlider({
+  sliderRef,
+  title,
+  imageCount,
+  imageAlt
+}: {
+  sliderRef: React.RefObject<Slider>;
+  title: string;
+  imageCount: number;
+  imageAlt: string;
+}) {
   const handlePrev = () => {
     sliderRef.current?.slickPrev();
   };
@@ -55,16 +65,16 @@ function GallerySlider({ sliderRef }: { sliderRef: React.RefObject<Slider> }) {
       <div className="content-stretch flex flex-col items-start justify-between relative self-stretch shrink-0 min-w-[289px]">
         <div className="content-stretch flex flex-col items-start relative shrink-0">
           <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[40px] text-black uppercase whitespace-nowrap">
-            {contentData.gallery.title}
+            {title}
           </p>
         </div>
         <GalleryControls onPrev={handlePrev} onNext={handleNext} />
       </div>
       <div className="flex-1 overflow-hidden">
         <Slider ref={sliderRef} {...GALLERY_SLIDER_SETTINGS}>
-          {[...Array(contentData.gallery.imageCount).keys()].map((i) => (
+          {[...Array(imageCount).keys()].map((i) => (
             <div key={i} className="px-[11px]">
-              <GalleryImage />
+              <GalleryImage imageAlt={imageAlt} />
             </div>
           ))}
         </Slider>
@@ -74,11 +84,17 @@ function GallerySlider({ sliderRef }: { sliderRef: React.RefObject<Slider> }) {
 }
 
 export function GallerySection() {
+  const contentData = usePageContent();
   const sliderRef = useRef<Slider>(null);
 
   return (
     <div className="content-stretch flex items-start relative shrink-0 w-full max-w-[1333px]">
-      <GallerySlider sliderRef={sliderRef} />
+      <GallerySlider
+        sliderRef={sliderRef}
+        title={contentData.gallery.title}
+        imageCount={contentData.gallery.imageCount}
+        imageAlt={contentData.gallery.imageAlt}
+      />
     </div>
   );
 }

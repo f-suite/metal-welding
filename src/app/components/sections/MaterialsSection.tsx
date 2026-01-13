@@ -1,7 +1,8 @@
 import { SectionHeading, MaterialCard } from "../shared";
-import contentData from "../../../content/welding.json";
+import { usePageContent } from "../../../contexts/PageContentContext";
 
 export function MaterialsSection() {
+  const contentData = usePageContent();
   return (
     <div className="bg-[#f0f0f0] relative shrink-0 w-full">
       <div className="size-full">

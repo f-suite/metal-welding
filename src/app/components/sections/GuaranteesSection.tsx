@@ -1,7 +1,8 @@
 import { SectionHeading, GuaranteeCard } from "../shared";
-import contentData from "../../../content/welding.json";
+import { usePageContent } from "../../../contexts/PageContentContext";
 
 export function GuaranteesSection() {
+  const contentData = usePageContent();
   return (
     <div className="content-stretch flex flex-col gap-[39px] items-start relative shrink-0 w-full">
       <SectionHeading text={contentData.guarantees.title} />
