@@ -14,11 +14,11 @@ export function WorkflowStep({ number, title }: WorkflowStepProps) {
         </div>
       </div>
       <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
-        <p className="font-['Montserrat',sans-serif] font-semibold leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[40px] text-[#d9d9d9] uppercase">
+        <p className="font-semibold leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[40px] text-[#d9d9d9] uppercase">
           {number}
         </p>
         <div className="content-stretch flex items-center justify-between relative shrink-0 w-[794px]">
-          <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[22px] text-black break-words">
+          <p className="font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[22px] text-black break-words">
             {title}
           </p>
           <div className="bg-[#d9d9d9] shrink-0 size-[14px]" />

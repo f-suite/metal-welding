@@ -11,9 +11,9 @@ export function WorkflowSection() {
           <WorkflowStep key={index} number={step.number} title={step.title} />
         ))}
       </div>
-      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[24px] text-black text-nowrap">
+      <p className="font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[24px] text-black text-nowrap">
         <span>{`*Весь процесс прозрачен: `}</span>
-        <span className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic text-[24px]">
+        <span className="font-medium leading-[100%] tracking-[0%] not-italic text-[24px]">
           {contentData.workflow.footerBold}
         </span>
         {`, на какой стадии находится проект.`}

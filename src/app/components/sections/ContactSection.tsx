@@ -7,16 +7,16 @@ function ManagerPhoto({ data }: { data: any }) {
     <div className="bg-[#d9d9d9] h-[361px] relative shrink-0 w-[654px]">
       <div className="flex flex-row items-center justify-center size-full">
         <div className="content-stretch flex gap-[10px] items-center justify-center px-[280px] py-[204px] relative size-full">
-          <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[24px] text-black text-nowrap">
+          <p className="font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[24px] text-black text-nowrap">
             {data.managerPhoto}
           </p>
           <div className="absolute bg-white flex flex-col items-center justify-center left-[15px] px-[12px] py-[10px] z-10 bottom-[40px]">
-            <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic text-[18px] text-black whitespace-nowrap">
+            <p className="font-normal leading-[100%] tracking-[0%] not-italic text-[18px] text-black whitespace-nowrap">
               {data.managerName}
             </p>
           </div>
           <div className="absolute bg-white flex flex-col items-center justify-center left-[430px] px-[12px] py-[10px] z-10 bottom-[40px]">
-            <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic text-[18px] text-black whitespace-nowrap">
+            <p className="font-normal leading-[100%] tracking-[0%] not-italic text-[18px] text-black whitespace-nowrap">
               {data.managerRole}
             </p>
           </div>

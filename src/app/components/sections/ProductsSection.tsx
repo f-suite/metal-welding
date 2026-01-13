@@ -21,7 +21,7 @@ export function ProductsSection() {
           ))}
         </div>
       </div>
-      <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[24px] text-black text-nowrap">
+      <p className="font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[24px] text-black text-nowrap">
         {contentData.products.footer}
       </p>
     </div>

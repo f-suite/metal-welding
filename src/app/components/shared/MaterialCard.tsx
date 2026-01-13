@@ -11,7 +11,7 @@ export function MaterialCard({ name }: MaterialCardProps) {
           <div className="basis-0 content-stretch flex flex-col grow items-start justify-between min-h-px min-w-px relative shrink-0 w-full">
             <div className="bg-[#d9d9d9] shrink-0 size-[46px]" />
             <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-              <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black w-full">
+              <p className="font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black w-full">
                 {name}
               </p>
             </div>

@@ -6,7 +6,7 @@ function TimelineImage({ imageAlt }: { imageAlt: string }) {
     <div className="bg-[#d9d9d9] h-[325px] relative shrink-0 w-[680px]">
       <div className="flex flex-row items-center justify-center size-full">
         <div className="content-stretch flex items-center justify-center px-[280px] py-[204px] relative size-full">
-          <p className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[24px] text-black text-nowrap">
+          <p className="font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[24px] text-black text-nowrap">
             {imageAlt}
           </p>
         </div>
@@ -19,10 +19,10 @@ function TimelineTable({ table }: { table: any }) {
   return (
     <div className="content-stretch flex gap-[60px] items-center relative shrink-0 w-[446px]">
       <div className="content-stretch flex flex-col gap-[23px] items-start relative shrink-0">
-        <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black text-nowrap">
+        <p className="font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black text-nowrap">
           {table.orderTypeLabel}
         </p>
-        <div className="content-stretch flex flex-col font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] gap-[16px] items-start not-italic relative shrink-0 text-[16px] text-black text-nowrap">
+        <div className="content-stretch flex flex-col font-normal leading-[100%] tracking-[0%] gap-[16px] items-start not-italic relative shrink-0 text-[16px] text-black text-nowrap">
           {table.rows.map((row: any, index: number) => (
             <p key={index} className="relative shrink-0">
               {row.orderType}
@@ -31,10 +31,10 @@ function TimelineTable({ table }: { table: any }) {
         </div>
       </div>
       <div className="content-stretch flex flex-col gap-[23px] items-start relative shrink-0">
-        <p className="font-['Montserrat',sans-serif] font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black text-nowrap">
+        <p className="font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[18px] text-black text-nowrap">
           {table.timelineLabel}
         </p>
-        <div className="content-stretch flex flex-col font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[0%] gap-[16px] items-start not-italic relative shrink-0 text-[16px] text-black text-nowrap">
+        <div className="content-stretch flex flex-col font-normal leading-[100%] tracking-[0%] gap-[16px] items-start not-italic relative shrink-0 text-[16px] text-black text-nowrap">
           {table.rows.map((row: any, index: number) => (
             <p key={index} className="relative shrink-0">
               {row.timeline}

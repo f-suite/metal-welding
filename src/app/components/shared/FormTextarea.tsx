@@ -14,7 +14,7 @@ export function FormTextarea({ value, onChange, placeholder }: FormTextareaProps
             value={value}
             onChange={onChange}
             placeholder={placeholder}
-            className="font-['Montserrat',sans-serif] font-normal leading-[100%] tracking-[-2%] not-italic w-full h-full text-[16px] text-black bg-transparent outline-none resize-none placeholder:text-[#9f9f9f]"
+            className="font-normal leading-[100%] tracking-[-2%] not-italic w-full h-full text-[16px] text-black bg-transparent outline-none resize-none placeholder:text-[#9f9f9f]"
           />
         </div>
       </div>
