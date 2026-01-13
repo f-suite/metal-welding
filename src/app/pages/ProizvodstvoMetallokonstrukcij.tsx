@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../../styles/slider.css";
 import { emailjsConfig } from "../../config/emailjs.config";
 import svgPaths from "../../imports/svg-mj3zdjuk7f";
-import { Header } from "../components/Header";
+import { Layout } from "../components/Layout";
 
 function Frame1() {
   return (
@@ -1632,12 +1632,8 @@ function Frame62() {
 
 export default function ProizvodstvoMetallokonstrukcij() {
   return (
-    <div className="bg-white relative size-full" data-name="Производство металлоконструкций">
-      <div className="w-full max-w-[1385px] mx-auto p-[26px] pt-[124px]">
-        <Frame62 />
-        <p className="font-['Montserrat',sans-serif] font-bold leading-[100%] tracking-[0%] not-italic text-[40px] text-black text-nowrap uppercase mt-[98px] mb-[20px] text-center">ФУТЕР</p>
-      </div>
-      <Header />
-    </div>
+    <Layout>
+      <Frame62 />
+    </Layout>
   );
 }
