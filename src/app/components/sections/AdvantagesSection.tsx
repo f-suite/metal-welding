@@ -3,12 +3,12 @@ import { usePageContent } from "../../../contexts/PageContentContext";
 
 function AdvantagesImage({ imageUrl, imageAlt }: { imageUrl?: string; imageAlt: string }) {
   const hasImage = imageUrl && (imageUrl.startsWith('/') || imageUrl.startsWith('http'));
-  
+
   return (
     <div className="bg-[#d9d9d9] flex h-[577px] items-center justify-center relative shrink-0 w-[650px] overflow-hidden">
       {hasImage ? (
-        <img 
-          src={imageUrl} 
+        <img
+          src={imageUrl}
           alt={imageAlt}
           className="w-full h-full object-cover"
         />
