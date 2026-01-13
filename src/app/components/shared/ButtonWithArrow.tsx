@@ -20,9 +20,9 @@ export function ButtonWithArrow({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className="content-stretch flex gap-[6px] items-center relative shrink-0 cursor-pointer hover:opacity-80 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+      className="content-stretch flex gap-1.5 sm:gap-[6px] items-center relative shrink-0 cursor-pointer hover:opacity-80 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
     >
-      <p className="font-semibold leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[22px] text-black text-nowrap">
+      <p className="font-semibold leading-[100%] tracking-[0%] not-italic relative shrink-0 text-lg sm:text-xl md:text-[22px] text-black">
         {text}
       </p>
       {showArrow && <ArrowIcon />}

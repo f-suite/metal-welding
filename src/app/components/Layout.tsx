@@ -14,7 +14,7 @@ export function Layout({ children }: LayoutProps) {
   return (
     <div className="bg-white relative size-full">
       <Header />
-      <main className="w-full max-w-[1385px] mx-auto p-[26px] pt-[124px]">
+      <main className="w-full max-w-[1385px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[26px] py-5 sm:py-6 md:py-[26px] pt-20 sm:pt-24 md:pt-28 lg:pt-[124px]">
         {children}
       </main>
       <Footer />
