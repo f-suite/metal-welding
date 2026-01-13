@@ -1,16 +1,26 @@
 import { SectionHeading, ButtonWithArrow } from "../shared";
 import { usePageContent } from "../../../contexts/PageContentContext";
 
-function TimelineImage({ imageAlt }: { imageAlt: string }) {
+function TimelineImage({ imageUrl, imageAlt }: { imageUrl?: string; imageAlt: string }) {
+  const hasImage = imageUrl && (imageUrl.startsWith('/') || imageUrl.startsWith('http'));
+  
   return (
-    <div className="bg-[#d9d9d9] h-[325px] relative shrink-0 w-[680px]">
-      <div className="flex flex-row items-center justify-center size-full">
-        <div className="content-stretch flex items-center justify-center px-[280px] py-[204px] relative size-full">
-          <p className="font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[24px] text-black text-nowrap">
-            {imageAlt}
-          </p>
+    <div className="bg-[#d9d9d9] h-[325px] relative shrink-0 w-[680px] overflow-hidden">
+      {hasImage ? (
+        <img 
+          src={imageUrl} 
+          alt={imageAlt}
+          className="w-full h-full object-cover"
+        />
+      ) : (
+        <div className="flex flex-row items-center justify-center size-full">
+          <div className="content-stretch flex items-center justify-center px-[280px] py-[204px] relative size-full">
+            <p className="font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[24px] text-black text-nowrap">
+              {imageAlt}
+            </p>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
@@ -58,7 +68,7 @@ export function TimelineSection() {
           </div>
           <ButtonWithArrow text={contentData.timeline.buttonText} />
         </div>
-        <TimelineImage imageAlt={contentData.timeline.imageAlt} />
+        <TimelineImage imageUrl={contentData.timeline.imageUrl} imageAlt={contentData.timeline.imageAlt} />
       </div>
     </div>
   );

@@ -4,16 +4,26 @@ import { ArrowForwardIos } from "../icons";
 import { GALLERY_SLIDER_SETTINGS } from "../../../constants/slider";
 import { usePageContent } from "../../../contexts/PageContentContext";
 
-function GalleryImage({ imageAlt }: { imageAlt: string }) {
+function GalleryImage({ imageUrl, imageAlt }: { imageUrl?: string; imageAlt: string }) {
+  const hasImage = imageUrl && (imageUrl.startsWith('/') || imageUrl.startsWith('http'));
+  
   return (
-    <div className="bg-[#d9d9d9] h-[361px] relative shrink-0 w-full">
-      <div className="flex flex-row items-center justify-center size-full">
-        <div className="content-stretch flex items-center justify-center px-[280px] py-[204px] relative size-full">
-          <p className="font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[24px] text-black text-nowrap">
-            {imageAlt}
-          </p>
+    <div className="bg-[#d9d9d9] h-[361px] relative shrink-0 w-full overflow-hidden">
+      {hasImage ? (
+        <img 
+          src={imageUrl} 
+          alt={imageAlt}
+          className="w-full h-full object-cover"
+        />
+      ) : (
+        <div className="flex flex-row items-center justify-center size-full">
+          <div className="content-stretch flex items-center justify-center px-[280px] py-[204px] relative size-full">
+            <p className="font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[24px] text-black text-nowrap">
+              {imageAlt}
+            </p>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
@@ -44,12 +54,12 @@ function GalleryControls({ onPrev, onNext }: { onPrev: () => void; onNext: () =>
 function GallerySlider({
   sliderRef,
   title,
-  imageCount,
+  images,
   imageAlt
 }: {
   sliderRef: React.RefObject<Slider>;
   title: string;
-  imageCount: number;
+  images?: string[];
   imageAlt: string;
 }) {
   const handlePrev = () => {
@@ -59,6 +69,8 @@ function GallerySlider({
   const handleNext = () => {
     sliderRef.current?.slickNext();
   };
+
+  const imageCount = images?.length || 3;
 
   return (
     <div className="basis-0 content-stretch flex gap-[22px] grow items-start min-h-px min-w-px relative shrink-0">
@@ -74,7 +86,7 @@ function GallerySlider({
         <Slider ref={sliderRef} {...GALLERY_SLIDER_SETTINGS}>
           {[...Array(imageCount).keys()].map((i) => (
             <div key={i} className="px-[11px]">
-              <GalleryImage imageAlt={imageAlt} />
+              <GalleryImage imageUrl={images?.[i]} imageAlt={imageAlt} />
             </div>
           ))}
         </Slider>
@@ -92,7 +104,7 @@ export function GallerySection() {
       <GallerySlider
         sliderRef={sliderRef}
         title={contentData.gallery.title}
-        imageCount={contentData.gallery.imageCount}
+        images={contentData.gallery.images}
         imageAlt={contentData.gallery.imageAlt}
       />
     </div>
