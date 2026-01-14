@@ -99,19 +99,30 @@ export function LaserCuttingTableSection() {
           Стоимость лазерной резки металла
         </p>
         <div className="overflow-x-auto w-full">
-          <table className="w-full md:w-auto border-collapse">
+          <table className="table-fixed w-full min-w-[500px] max-w-[900px] border-collapse border border-gray-300">
+            <colgroup>
+              <col className="w-[25%]" />
+              <col className="w-[25%]" />
+              <col className="w-[25%]" />
+              <col className="w-[25%]" />
+            </colgroup>
             <thead>
-              <tr className="bg-gray-100">
-                <th className="border border-gray-300 px-3 py-2 md:px-4 md:py-2.5 text-left font-medium text-sm sm:text-base md:text-lg text-black whitespace-nowrap">
+              <tr className="bg-gray-200 border-b border-gray-300">
+                <th colSpan={4} className="px-2 py-3 md:px-4 md:py-3.5 text-center font-bold text-sm md:text-lg text-gray-900">
+                  Прайс-лист на лазерную резку металла
+                </th>
+              </tr>
+              <tr className="bg-gray-100 border-b border-gray-300">
+                <th className="px-1.5 py-2 md:px-3 md:py-2.5 text-left font-semibold text-xs md:text-base text-gray-800 border-r border-gray-300 break-words">
                   Материал
                 </th>
-                <th className="border border-gray-300 px-3 py-2 md:px-4 md:py-2.5 text-left font-medium text-sm sm:text-base md:text-lg text-black whitespace-nowrap">
+                <th className="px-1.5 py-2 md:px-3 md:py-2.5 text-left font-semibold text-xs md:text-base text-gray-800 border-r border-gray-300 break-words">
                   Толщина, мм
                 </th>
-                <th className="border border-gray-300 px-3 py-2 md:px-4 md:py-2.5 text-left font-medium text-sm sm:text-base md:text-lg text-black whitespace-nowrap">
+                <th className="px-1.5 py-2 md:px-3 md:py-2.5 text-left font-semibold text-xs md:text-base text-gray-800 border-r border-gray-300 break-words">
                   Цена за м.п., BYN
                 </th>
-                <th className="border border-gray-300 px-3 py-2 md:px-4 md:py-2.5 text-left font-medium text-sm sm:text-base md:text-lg text-black whitespace-nowrap">
+                <th className="px-1.5 py-2 md:px-3 md:py-2.5 text-left font-semibold text-xs md:text-base text-gray-800 break-words">
                   Мин. стоимость, BYN
                 </th>
               </tr>
@@ -119,22 +130,27 @@ export function LaserCuttingTableSection() {
             <tbody>
               {materialGroups.map((group, groupIndex) => (
                 group.rows.map((row, rowIndex) => (
-                  <tr key={`${groupIndex}-${rowIndex}`} className="hover:bg-gray-50">
+                  <tr
+                    key={`${groupIndex}-${rowIndex}`}
+                    className={`transition-colors duration-200 ${
+                      (groupIndex * 100 + rowIndex) % 2 === 0 ? 'bg-white' : 'bg-gray-50/40'
+                    } hover:bg-blue-50/50 border-b border-gray-300`}
+                  >
                     {rowIndex === 0 && (
                       <td
                         rowSpan={group.rows.length}
-                        className="border border-gray-300 px-3 py-2 md:px-4 md:py-2.5 text-sm sm:text-base md:text-lg text-black align-middle font-medium"
+                        className="px-1.5 py-1.5 md:px-3 md:py-2 text-xs md:text-base text-gray-900 align-middle font-semibold bg-gray-100/70 border-r border-gray-300 break-words whitespace-normal"
                       >
                         {group.name}
                       </td>
                     )}
-                    <td className="border border-gray-300 px-3 py-2 md:px-4 md:py-2.5 text-sm sm:text-base md:text-lg text-black">
+                    <td className="px-1.5 py-1.5 md:px-3 md:py-2 text-xs md:text-base text-gray-700 border-r border-gray-300 whitespace-nowrap">
                       {row.thickness}
                     </td>
-                    <td className="border border-gray-300 px-3 py-2 md:px-4 md:py-2.5 text-sm sm:text-base md:text-lg text-black">
+                    <td className="px-1.5 py-1.5 md:px-3 md:py-2 text-xs md:text-base text-gray-700 font-medium border-r border-gray-300 whitespace-nowrap">
                       {row.pricePerMeter}
                     </td>
-                    <td className="border border-gray-300 px-3 py-2 md:px-4 md:py-2.5 text-sm sm:text-base md:text-lg text-black">
+                    <td className="px-1.5 py-1.5 md:px-3 md:py-2 text-xs md:text-base text-gray-700 whitespace-nowrap">
                       {row.minPrice}
                     </td>
                   </tr>
