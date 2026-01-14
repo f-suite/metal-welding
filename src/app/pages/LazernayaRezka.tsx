@@ -13,6 +13,7 @@ import {
   CertificatesSection,
   GallerySection,
   ContactSection,
+  LaserCuttingTableSection,
 } from "../components/sections";
 import contentData from "../../content/lazernaya-rezka.json";
 import "slick-carousel/slick/slick.css";
@@ -30,6 +31,7 @@ export default function LazernayaRezka() {
           <ServicesSection />
           <MaterialsSection />
           <ProductsSection />
+          <LaserCuttingTableSection />
           <TimelineSection />
           <GuaranteesSection />
           <WorkflowSection />

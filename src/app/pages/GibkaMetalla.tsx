@@ -13,6 +13,7 @@ import {
   CertificatesSection,
   GallerySection,
   ContactSection,
+  PricingTableSection,
 } from "../components/sections";
 import contentData from "../../content/gibka-metalla.json";
 import "slick-carousel/slick/slick.css";
@@ -30,6 +31,7 @@ export default function GibkaMetalla() {
           <ServicesSection />
           <MaterialsSection />
           <ProductsSection />
+          <PricingTableSection />
           <TimelineSection />
           <GuaranteesSection />
           <WorkflowSection />
