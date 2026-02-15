@@ -13,6 +13,7 @@ import {
   CertificatesSection,
   GallerySection,
   ContactSection,
+  LaserCuttingTableSection,
 } from "../components/sections";
 import contentData from "../../content/lazernaya-rezka.json";
 import "slick-carousel/slick/slick.css";
@@ -23,13 +24,14 @@ export default function LazernayaRezka() {
   return (
     <PageContentProvider content={contentData}>
       <Layout>
-        <div className="flex flex-col gap-[140px] items-start">
+        <div className="flex flex-col gap-16 sm:gap-20 md:gap-28 lg:gap-[140px] items-start">
           <HeroSection />
           <CapabilitiesSection />
           <AdvantagesSection />
           <ServicesSection />
           <MaterialsSection />
           <ProductsSection />
+          <LaserCuttingTableSection />
           <TimelineSection />
           <GuaranteesSection />
           <WorkflowSection />

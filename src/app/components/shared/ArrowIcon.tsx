@@ -1,6 +1,6 @@
 export function ArrowIcon() {
   return (
-    <div className="h-[20px] relative shrink-0 w-[36px]">
+    <div className="h-4 sm:h-[18px] md:h-[20px] relative shrink-0 w-7 sm:w-8 md:w-[36px]">
       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 36 20">
         <g id="Frame 2">
           <path

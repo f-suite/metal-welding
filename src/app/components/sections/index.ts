@@ -10,3 +10,5 @@ export { WorkflowSection } from "./WorkflowSection";
 export { CertificatesSection } from "./CertificatesSection";
 export { GallerySection } from "./GallerySection";
 export { ContactSection } from "./ContactSection";
+export { PricingTableSection } from "./PricingTableSection";
+export { LaserCuttingTableSection } from "./LaserCuttingTableSection";

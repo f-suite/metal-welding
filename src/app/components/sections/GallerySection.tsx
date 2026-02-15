@@ -8,7 +8,7 @@ function GalleryImage({ imageUrl, imageAlt }: { imageUrl?: string; imageAlt: str
   const hasImage = imageUrl && (imageUrl.startsWith('/') || imageUrl.startsWith('http'));
   
   return (
-    <div className="bg-[#d9d9d9] h-[361px] relative shrink-0 w-full overflow-hidden">
+    <div className="bg-[#d9d9d9] h-[240px] sm:h-[300px] md:h-[361px] relative w-full overflow-hidden">
       {hasImage ? (
         <img 
           src={imageUrl} 
@@ -17,8 +17,8 @@ function GalleryImage({ imageUrl, imageAlt }: { imageUrl?: string; imageAlt: str
         />
       ) : (
         <div className="flex flex-row items-center justify-center size-full">
-          <div className="content-stretch flex items-center justify-center px-[280px] py-[204px] relative size-full">
-            <p className="font-normal leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[24px] text-black text-nowrap">
+          <div className="content-stretch flex items-center justify-center px-4 sm:px-12 md:px-20 py-8 sm:py-12 relative size-full">
+            <p className="font-normal leading-[100%] tracking-[0%] not-italic relative text-base sm:text-lg md:text-[24px] text-black text-center">
               {imageAlt}
             </p>
           </div>
@@ -30,20 +30,20 @@ function GalleryImage({ imageUrl, imageAlt }: { imageUrl?: string; imageAlt: str
 
 function GalleryControls({ onPrev, onNext }: { onPrev: () => void; onNext: () => void }) {
   return (
-    <div className="content-stretch flex gap-[15px] items-center relative shrink-0">
+    <div className="content-stretch flex gap-3 sm:gap-[15px] items-center relative">
       <button
         onClick={onPrev}
-        className="flex items-center justify-center relative shrink-0 cursor-pointer hover:opacity-80 transition-opacity"
+        className="flex items-center justify-center relative cursor-pointer hover:opacity-80 transition-opacity"
       >
         <div className="flex-none rotate-[180deg] scale-y-[-100%]">
-          <div className="bg-[#e9e9e9] content-stretch flex items-center p-[18px] relative size-[60px] hover:bg-[#d0d0d0] transition-colors">
+          <div className="bg-[#e9e9e9] content-stretch flex items-center p-3 sm:p-4 md:p-[18px] relative size-12 sm:size-14 md:size-[60px] hover:bg-[#d0d0d0] transition-colors">
             <ArrowForwardIos />
           </div>
         </div>
       </button>
       <button
         onClick={onNext}
-        className="bg-[#d9d9d9] content-stretch flex items-center p-[18px] relative shrink-0 size-[60px] hover:bg-[#c0c0c0] transition-colors cursor-pointer"
+        className="bg-[#d9d9d9] content-stretch flex items-center p-3 sm:p-4 md:p-[18px] relative size-12 sm:size-14 md:size-[60px] hover:bg-[#c0c0c0] transition-colors cursor-pointer"
       >
         <ArrowForwardIos />
       </button>
@@ -73,23 +73,38 @@ function GallerySlider({
   const imageCount = images?.length || 3;
 
   return (
-    <div className="basis-0 content-stretch flex gap-[22px] grow items-start min-h-px min-w-px relative shrink-0">
-      <div className="content-stretch flex flex-col items-start justify-between relative self-stretch shrink-0 min-w-[289px]">
-        <div className="content-stretch flex flex-col items-start relative shrink-0">
-          <p className="font-medium leading-[100%] tracking-[0%] not-italic relative shrink-0 text-[40px] text-black uppercase whitespace-nowrap">
+    <div className="w-full content-stretch flex flex-col lg:flex-row gap-5 sm:gap-6 md:gap-[22px] items-start min-h-px min-w-px relative">
+      {/* Mobile/Tablet: Title on top */}
+      <div className="lg:hidden w-full">
+        <p className="font-medium leading-[100%] tracking-[0%] not-italic relative text-2xl sm:text-3xl md:text-[40px] text-black uppercase">
+          {title}
+        </p>
+      </div>
+      
+      {/* Desktop: Title and Controls on left */}
+      <div className="hidden lg:flex content-stretch flex-col items-start justify-between relative self-stretch min-w-[289px]">
+        <div className="content-stretch flex flex-col items-start relative">
+          <p className="font-medium leading-[100%] tracking-[0%] not-italic relative text-[40px] text-black uppercase whitespace-nowrap">
             {title}
           </p>
         </div>
         <GalleryControls onPrev={handlePrev} onNext={handleNext} />
       </div>
-      <div className="flex-1 overflow-hidden">
+      
+      {/* Slider */}
+      <div className="w-full lg:flex-1 overflow-hidden">
         <Slider ref={sliderRef} {...GALLERY_SLIDER_SETTINGS}>
           {[...Array(imageCount).keys()].map((i) => (
-            <div key={i} className="px-[11px]">
+            <div key={i} className="px-2 sm:px-[11px]">
               <GalleryImage imageUrl={images?.[i]} imageAlt={imageAlt} />
             </div>
           ))}
         </Slider>
+      </div>
+      
+      {/* Mobile/Tablet: Controls on bottom */}
+      <div className="lg:hidden w-full flex justify-center">
+        <GalleryControls onPrev={handlePrev} onNext={handleNext} />
       </div>
     </div>
   );
@@ -100,7 +115,7 @@ export function GallerySection() {
   const sliderRef = useRef<Slider>(null);
 
   return (
-    <div className="content-stretch flex items-start relative shrink-0 w-full max-w-[1333px]">
+    <div className="content-stretch flex items-start relative w-full max-w-[1333px]">
       <GallerySlider
         sliderRef={sliderRef}
         title={contentData.gallery.title}

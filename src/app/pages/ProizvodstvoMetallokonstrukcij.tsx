@@ -23,7 +23,7 @@ export default function ProizvodstvoMetallokonstrukcij() {
   return (
     <PageContentProvider content={contentData}>
       <Layout>
-        <div className="flex flex-col gap-[140px] items-start">
+        <div className="flex flex-col gap-16 sm:gap-20 md:gap-28 lg:gap-[140px] items-start">
           <HeroSection />
           <CapabilitiesSection />
           <AdvantagesSection />
